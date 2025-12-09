@@ -34,5 +34,5 @@ Pillow>=10.0.0
 # Development
 ipython>=8.12.0
 dj-database-url
-
+whitenoise
 gunicorn>=21.0.0
