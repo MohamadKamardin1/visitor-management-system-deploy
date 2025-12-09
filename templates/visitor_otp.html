@@ -1,0 +1,131 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg-1: #0b0b0f;
+            --bg-2: #111118;
+            --glass: rgba(255,255,255,0.06);
+            --border: rgba(255,255,255,0.14);
+            --text: #f5f6f8;
+            --muted: #b7bbc6;
+        }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--bg-1), var(--bg-2));
+            color: var(--text);
+            font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+        .text-muted, small { color: var(--muted) !important; }
+        .glass {
+            background: var(--glass);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            box-shadow: 0 18px 60px rgba(0,0,0,0.45);
+            backdrop-filter: blur(18px);
+        }
+        .form-control {
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            color: var(--text);
+        }
+        .form-control:focus {
+            box-shadow: 0 0 0 2px rgba(255,255,255,0.12);
+            border-color: rgba(255,255,255,0.3);
+        }
+        .btn-primary {
+            background: linear-gradient(145deg, #202026, #2c2c33);
+            border: 1px solid rgba(255,255,255,0.12);
+            color: var(--text);
+            border-radius: 14px;
+            padding: 12px;
+            font-weight: 600;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+        }
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            background: rgba(255,255,255,0.04);
+            color: var(--muted);
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-4">
+        <section class="text-center mb-4">
+            <div class="pill mb-3"><i class="fas fa-shield-alt"></i> OTP Verification</div>
+            <h1 class="fw-bold mb-2" style="font-size:32px; letter-spacing:-0.3px;">Verify Your Visit</h1>
+            <p class="text-muted mb-3" style="font-size:16px;">Enter the code sent to your phone or email.</p>
+            {% if request.GET.phone %}
+                <p class="text-muted mb-1" style="font-size:14px;">Phone: {{ request.GET.phone }}</p>
+            {% endif %}
+            {% if request.GET.visit_id %}
+                <p class="text-muted mb-1" style="font-size:14px;">Visit ID: {{ request.GET.visit_id }}</p>
+            {% endif %}
+        </section>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="glass p-4">
+                    {% if error %}
+                        <div class="alert alert-danger py-2">{{ error }}</div>
+                    {% endif %}
+                    {% if success %}
+                        <div class="alert alert-success py-2">{{ success }}</div>
+                    {% endif %}
+                    <form method="post" action="{% url 'visitor_otp' %}">
+                        {% csrf_token %}
+                        {% if request.GET.phone %}
+                            <input type="hidden" name="phone_number" value="{{ request.GET.phone }}">
+                        {% endif %}
+                        {% if request.GET.visit_id %}
+                            <input type="hidden" name="visit_id" value="{{ request.GET.visit_id }}">
+                        {% endif %}
+                        <div class="mb-3">
+                            <label class="form-label text-muted">Phone Number</label>
+                            <input required type="text" name="phone_number" class="form-control" placeholder="+1234567890" value="{{ request.GET.phone|default:'' }}">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label text-muted">OTP Code</label>
+                            <input required type="text" name="code" class="form-control" placeholder="6-digit code">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label text-muted">Visit ID (optional)</label>
+                            <input type="number" name="visit_id" class="form-control" placeholder="If provided">
+                        </div>
+                        <div class="d-grid">
+                            <button class="btn btn-primary" type="submit"><i class="fas fa-check me-2"></i>Verify</button>
+                        </div>
+                    </form>
+                    <hr class="my-4" style="border-color: rgba(255,255,255,0.1);">
+                    <div class="text-center">
+                        <form method="post" action="{% url 'visitor_resend_otp' %}">
+                            {% csrf_token %}
+                            <input type="hidden" name="phone_number" value="{{ request.GET.phone|default:'' }}">
+                            <input type="hidden" name="visit_id" value="{{ request.GET.visit_id|default:'' }}">
+                            <div class="mb-2 text-muted">Didn’t receive the code?</div>
+                            <button class="btn btn-outline-light btn-sm" type="submit">
+                                <i class="fas fa-sync-alt me-2"></i>Resend OTP
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

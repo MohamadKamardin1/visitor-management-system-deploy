@@ -1,0 +1,1851 @@
+INFO 2025-12-09 09:15:51,068 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 09:16:49,663 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 09:16:49,960 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 09:16:50,033 services Telerivet API credentials not configured.
+INFO 2025-12-09 09:17:05,255 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 09:17:05,552 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 09:17:05,622 services Telerivet API credentials not configured.
+INFO 2025-12-09 09:18:55,694 autoreload /home/hamy/Desktop/vms-backend/core/tasks.py changed, reloading.
+INFO 2025-12-09 09:18:56,007 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 09:18:56,083 services Telerivet API credentials not configured.
+INFO 2025-12-09 09:19:00,781 log "GET /api/hosts/for_kiosk/ HTTP/1.1" 200 176
+INFO 2025-12-09 09:19:21,950 log "POST /api/visits/check_in/ HTTP/1.1" 201 103
+INFO 2025-12-09 09:19:21,983 views ================================================================================
+INFO 2025-12-09 09:19:21,984 views 🔄 Processing OTP request
+DEBUG 2025-12-09 09:19:21,984 views 📥 Request data: {'phone_number': '+255655225226', 'visit_id': 27}
+INFO 2025-12-09 09:19:21,984 views 📱 Processing OTP request for phone: +255655225226
+INFO 2025-12-09 09:19:21,984 views 📧 Email provided: No email provided
+INFO 2025-12-09 09:19:21,984 views 🏢 Visit ID: 27
+INFO 2025-12-09 09:19:21,985 views ✅ Found visit: 27
+INFO 2025-12-09 09:19:21,985 views 🔑 Generating OTP...
+INFO 2025-12-09 09:19:21,992 views ✅ OTP generated: 090767 (ID: 21)
+INFO 2025-12-09 09:19:21,993 views 🚀 Queueing OTP sending task...
+INFO 2025-12-09 09:19:22,036 tasks ================================================================================
+INFO 2025-12-09 09:19:22,036 tasks 🚀 Starting OTP sending task
+INFO 2025-12-09 09:19:22,037 tasks 📱 Phone: +255655225226
+INFO 2025-12-09 09:19:22,037 tasks 📧 Email: Not provided
+INFO 2025-12-09 09:19:22,037 tasks 🔑 OTP Code: 090767
+WARNING 2025-12-09 09:19:22,037 tasks ⚠️ Telerivet API not configured. SMS will not be sent.
+INFO 2025-12-09 09:19:22,037 tasks ℹ️ No email provided, skipping email sending
+INFO 2025-12-09 09:19:22,037 tasks 📊 Task completed with results:
+INFO 2025-12-09 09:19:22,037 tasks 📱 SMS Status: ❌ Failed - SMS service not configured
+INFO 2025-12-09 09:19:22,037 tasks ================================================================================
+INFO 2025-12-09 09:19:22,040 views 📨 Task completed: {'sms': {'sent': False, 'message': 'SMS service not configured', 'to': '+255655225226'}, 'email': {'sent': False, 'message': 'No email provided', 'to': None}}
+INFO 2025-12-09 09:19:22,045 views 📝 Audit log created successfully
+INFO 2025-12-09 09:19:22,045 views ✅ OTP request processed successfully. Response: {'message': 'Warning: Failed to send SMS. Please try again.', 'phone_number': '+255655225226', 'sms_sent': False, 'email_sent': False, 'expires_in_minutes': 5}
+INFO 2025-12-09 09:19:22,045 views ================================================================================
+INFO 2025-12-09 09:19:22,046 log "POST /api/visits/request_otp/ HTTP/1.1" 200 150
+INFO 2025-12-09 09:34:48,918 log "GET /api/hosts/for_kiosk/ HTTP/1.1" 200 176
+INFO 2025-12-09 09:35:26,911 log "POST /api/visits/check_in/ HTTP/1.1" 201 103
+WARNING 2025-12-09 09:35:26,965 log Too Many Requests: /api/visits/request_otp/
+WARNING 2025-12-09 09:35:26,965 log "POST /api/visits/request_otp/ HTTP/1.1" 429 71
+INFO 2025-12-09 09:35:40,723 log "GET /api/hosts/for_kiosk/ HTTP/1.1" 200 176
+INFO 2025-12-09 09:36:07,198 log "POST /api/visits/check_in/ HTTP/1.1" 201 103
+WARNING 2025-12-09 09:36:07,234 log Too Many Requests: /api/visits/request_otp/
+WARNING 2025-12-09 09:36:07,234 log "POST /api/visits/request_otp/ HTTP/1.1" 429 35
+INFO 2025-12-09 09:36:21,833 log "GET / HTTP/1.1" 200 7834
+WARNING 2025-12-09 09:36:21,891 log Not Found: /favicon.ico
+WARNING 2025-12-09 09:36:21,892 log "GET /favicon.ico HTTP/1.1" 404 21881
+INFO 2025-12-09 09:36:26,120 log "GET /api/login/ HTTP/1.1" 302 0
+INFO 2025-12-09 09:36:26,139 log "GET /admin/ HTTP/1.1" 200 16950
+INFO 2025-12-09 09:36:26,189 log "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2025-12-09 09:36:26,191 log "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2025-12-09 09:36:26,192 log "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2025-12-09 09:36:26,193 log "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2025-12-09 09:36:26,193 log "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2025-12-09 09:36:26,193 log "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2025-12-09 09:36:26,198 log "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2025-12-09 09:36:26,237 log "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2025-12-09 09:36:26,238 log "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2025-12-09 09:36:26,241 log "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 689
+INFO 2025-12-09 09:36:30,063 log "GET /admin/core/visitor/ HTTP/1.1" 200 20180
+INFO 2025-12-09 09:36:30,075 log "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2025-12-09 09:36:30,075 log "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-12-09 09:36:30,075 log "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-12-09 09:36:30,075 log "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-12-09 09:36:30,076 log "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-12-09 09:36:30,076 log "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-12-09 09:36:30,080 log "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-12-09 09:36:30,080 log "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-12-09 09:36:30,080 log "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-12-09 09:36:30,082 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-09 09:36:30,129 log "GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+INFO 2025-12-09 09:36:30,129 log "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2025-12-09 09:36:30,144 log "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2025-12-09 09:36:30,145 log "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2025-12-09 09:36:30,147 log "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2025-12-09 09:36:30,147 log "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+INFO 2025-12-09 09:36:36,849 log "POST /admin/core/visitor/ HTTP/1.1" 200 14750
+INFO 2025-12-09 09:36:36,860 log "GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+INFO 2025-12-09 09:36:38,412 log "POST /admin/core/visitor/ HTTP/1.1" 302 0
+INFO 2025-12-09 09:36:38,421 log "GET /admin/core/visitor/ HTTP/1.1" 200 15383
+INFO 2025-12-09 09:36:38,475 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-09 09:36:38,524 log "GET /static/admin/img/icon-yes-dark.svg HTTP/1.1" 200 558
+INFO 2025-12-09 09:36:46,030 log "GET /api/hosts/for_kiosk/ HTTP/1.1" 200 176
+INFO 2025-12-09 09:37:07,788 log "POST /api/visits/check_in/ HTTP/1.1" 201 103
+WARNING 2025-12-09 09:37:07,832 log Too Many Requests: /api/visits/request_otp/
+WARNING 2025-12-09 09:37:07,832 log "POST /api/visits/request_otp/ HTTP/1.1" 429 35
+INFO 2025-12-09 09:38:15,401 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 09:38:15,468 services Telerivet API credentials not configured.
+INFO 2025-12-09 09:38:18,935 log "GET /api/hosts/for_kiosk/ HTTP/1.1" 200 176
+INFO 2025-12-09 09:38:37,970 log "POST /api/visits/check_in/ HTTP/1.1" 201 103
+INFO 2025-12-09 09:38:38,038 views ================================================================================
+INFO 2025-12-09 09:38:38,038 views 🔄 Processing OTP request
+DEBUG 2025-12-09 09:38:38,038 views 📥 Request data: {'phone_number': '+255655222666', 'visit_id': 31}
+INFO 2025-12-09 09:38:38,038 views 📱 Processing OTP request for phone: +255655222666
+INFO 2025-12-09 09:38:38,038 views 📧 Email provided: No email provided
+INFO 2025-12-09 09:38:38,038 views 🏢 Visit ID: 31
+INFO 2025-12-09 09:38:38,039 views ✅ Found visit: 31
+INFO 2025-12-09 09:38:38,039 views 🔑 Generating OTP...
+INFO 2025-12-09 09:38:38,060 views ✅ OTP generated: 160446 (ID: 22)
+INFO 2025-12-09 09:38:38,060 views 🚀 Queueing OTP sending task...
+INFO 2025-12-09 09:38:38,103 tasks ================================================================================
+INFO 2025-12-09 09:38:38,103 tasks 🚀 Starting OTP sending task
+INFO 2025-12-09 09:38:38,103 tasks 📱 Phone: +255655222666
+INFO 2025-12-09 09:38:38,103 tasks 📧 Email: Not provided
+INFO 2025-12-09 09:38:38,103 tasks 🔑 OTP Code: 160446
+WARNING 2025-12-09 09:38:38,103 tasks ⚠️ Telerivet API not configured. SMS will not be sent.
+INFO 2025-12-09 09:38:38,103 tasks ℹ️ No email provided, skipping email sending
+INFO 2025-12-09 09:38:38,103 tasks 📊 Task completed with results:
+INFO 2025-12-09 09:38:38,103 tasks 📱 SMS Status: ❌ Failed - SMS service not configured
+INFO 2025-12-09 09:38:38,103 tasks ================================================================================
+INFO 2025-12-09 09:38:38,106 views 📨 Task completed: {'sms': {'sent': False, 'message': 'SMS service not configured', 'to': '+255655222666'}, 'email': {'sent': False, 'message': 'No email provided', 'to': None}}
+INFO 2025-12-09 09:38:38,122 views 📝 Audit log created successfully
+INFO 2025-12-09 09:38:38,122 views ✅ OTP request processed successfully. Response: {'message': 'Warning: Failed to send SMS. Please try again.', 'phone_number': '+255655222666', 'sms_sent': False, 'email_sent': False, 'expires_in_minutes': 5}
+INFO 2025-12-09 09:38:38,122 views ================================================================================
+INFO 2025-12-09 09:38:38,123 log "POST /api/visits/request_otp/ HTTP/1.1" 200 150
+INFO 2025-12-09 09:50:11,747 log "GET /api/hosts/for_kiosk/ HTTP/1.1" 200 176
+INFO 2025-12-09 09:50:39,018 log "POST /api/visits/check_in/ HTTP/1.1" 201 103
+WARNING 2025-12-09 09:50:39,071 log Too Many Requests: /api/visits/request_otp/
+WARNING 2025-12-09 09:50:39,071 log "POST /api/visits/request_otp/ HTTP/1.1" 429 71
+INFO 2025-12-09 09:50:50,711 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 09:50:50,780 services Telerivet API credentials not configured.
+INFO 2025-12-09 09:50:53,869 log "GET /api/hosts/for_kiosk/ HTTP/1.1" 200 176
+INFO 2025-12-09 09:51:18,864 log "POST /api/visits/check_in/ HTTP/1.1" 201 103
+INFO 2025-12-09 09:51:18,903 views ================================================================================
+INFO 2025-12-09 09:51:18,904 views 🔄 Processing OTP request
+DEBUG 2025-12-09 09:51:18,904 views 📥 Request data: {'phone_number': '+255655222666', 'visit_id': 33, 'email': 'coderxsultan@gmail.com'}
+INFO 2025-12-09 09:51:18,904 views 📱 Processing OTP request for phone: +255655222666
+INFO 2025-12-09 09:51:18,904 views 📧 Email provided: coderxsultan@gmail.com
+INFO 2025-12-09 09:51:18,904 views 🏢 Visit ID: 33
+INFO 2025-12-09 09:51:18,905 views ✅ Found visit: 33
+INFO 2025-12-09 09:51:18,906 views 🔑 Generating OTP...
+INFO 2025-12-09 09:51:18,917 views ✅ OTP generated: 230004 (ID: 23)
+INFO 2025-12-09 09:51:18,917 views 🚀 Queueing OTP sending task...
+INFO 2025-12-09 09:51:18,962 tasks ================================================================================
+INFO 2025-12-09 09:51:18,962 tasks 🚀 Starting OTP sending task
+INFO 2025-12-09 09:51:18,962 tasks 📱 Phone: +255655222666
+INFO 2025-12-09 09:51:18,962 tasks 📧 Email: coderxsultan@gmail.com
+INFO 2025-12-09 09:51:18,963 tasks 🔑 OTP Code: 230004
+WARNING 2025-12-09 09:51:18,963 tasks ⚠️ Telerivet API not configured. SMS will not be sent.
+INFO 2025-12-09 09:51:18,963 tasks 📧 Attempting to send OTP email to coderxsultan@gmail.com
+INFO 2025-12-09 09:51:18,963 utils 📧 Preparing to send OTP email to: coderxsultan@gmail.com
+DEBUG 2025-12-09 09:51:18,963 utils 📤 Sending email - From: VMS <sulboymnyama@gmail.com>, To: ['coderxsultan@gmail.com']
+DEBUG 2025-12-09 09:51:18,963 utils 📧 Subject: Your Secure OTP Code
+ERROR 2025-12-09 09:51:18,963 utils ❌ Failed to send OTP email to coderxsultan@gmail.com: send_mail() got an unexpected keyword argument 'connection_timeout'
+Traceback (most recent call last):
+  File "/home/hamy/Desktop/vms-backend/core/utils.py", line 149, in send_otp_email
+    send_mail(
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 268, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+TypeError: send_mail() got an unexpected keyword argument 'connection_timeout'
+ERROR 2025-12-09 09:51:18,963 tasks ❌ Failed to send email: ❌ Failed to send OTP email to coderxsultan@gmail.com: send_mail() got an unexpected keyword argument 'connection_timeout'
+INFO 2025-12-09 09:51:18,964 tasks 📊 Task completed with results:
+INFO 2025-12-09 09:51:18,964 tasks 📱 SMS Status: ❌ Failed - SMS service not configured
+INFO 2025-12-09 09:51:18,964 tasks 📧 Email Status: ❌ Failed - ❌ Failed to send OTP email to coderxsultan@gmail.com: send_mail() got an unexpected keyword argument 'connection_timeout'
+INFO 2025-12-09 09:51:18,964 tasks ================================================================================
+INFO 2025-12-09 09:51:18,968 views 📨 Task completed: {'sms': {'sent': False, 'message': 'SMS service not configured', 'to': '+255655222666'}, 'email': {'sent': False, 'message': "❌ Failed to send OTP email to coderxsultan@gmail.com: send_mail() got an unexpected keyword argument 'connection_timeout'", 'to': 'coderxsultan@gmail.com'}}
+INFO 2025-12-09 09:51:18,974 views 📝 Audit log created successfully
+INFO 2025-12-09 09:51:18,974 views ✅ OTP request processed successfully. Response: {'message': "Warning: Failed to send SMS. Please try again. Email sending failed: ❌ Failed to send OTP email to coderxsultan@gmail.com: send_mail() got an unexpected keyword argument 'connection_timeout'", 'phone_number': '+255655222666', 'sms_sent': False, 'email_sent': False, 'expires_in_minutes': 5, 'email_error': "❌ Failed to send OTP email to coderxsultan@gmail.com: send_mail() got an unexpected keyword argument 'connection_timeout'"}
+INFO 2025-12-09 09:51:18,974 views ================================================================================
+INFO 2025-12-09 09:51:18,975 log "POST /api/visits/request_otp/ HTTP/1.1" 200 436
+INFO 2025-12-09 10:03:06,780 autoreload /home/hamy/Desktop/vms-backend/core/utils.py changed, reloading.
+INFO 2025-12-09 10:03:07,110 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 10:03:11,264 autoreload /home/hamy/Desktop/vms-backend/core/utils.py changed, reloading.
+INFO 2025-12-09 10:03:11,557 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 10:03:11,627 services Telerivet API credentials not configured.
+INFO 2025-12-09 10:03:14,444 views ================================================================================
+INFO 2025-12-09 10:03:14,444 views 🔄 Processing OTP request
+DEBUG 2025-12-09 10:03:14,444 views 📥 Request data: {'phone_number': '+255655222666', 'visit_id': 33, 'email': 'coderxsultan@gmail.com'}
+INFO 2025-12-09 10:03:14,466 views 📱 Processing OTP request for phone: +255655222666
+INFO 2025-12-09 10:03:14,466 views 📧 Email provided: coderxsultan@gmail.com
+INFO 2025-12-09 10:03:14,466 views 🏢 Visit ID: 33
+INFO 2025-12-09 10:03:14,468 views ✅ Found visit: 33
+INFO 2025-12-09 10:03:14,468 views 🔑 Generating OTP...
+INFO 2025-12-09 10:03:14,477 views ✅ OTP generated: 653061 (ID: 24)
+INFO 2025-12-09 10:03:14,477 views 🚀 Queueing OTP sending task...
+INFO 2025-12-09 10:03:14,520 tasks ================================================================================
+INFO 2025-12-09 10:03:14,520 tasks 🚀 Starting OTP sending task
+INFO 2025-12-09 10:03:14,520 tasks 📱 Phone: +255655222666
+INFO 2025-12-09 10:03:14,520 tasks 📧 Email: coderxsultan@gmail.com
+INFO 2025-12-09 10:03:14,520 tasks 🔑 OTP Code: 653061
+WARNING 2025-12-09 10:03:14,520 tasks ⚠️ Telerivet API not configured. SMS will not be sent.
+INFO 2025-12-09 10:03:14,520 tasks 📧 Attempting to send OTP email to coderxsultan@gmail.com
+INFO 2025-12-09 10:03:14,520 utils 📧 Preparing to send OTP email to: coderxsultan@gmail.com
+DEBUG 2025-12-09 10:03:14,520 utils 📤 Sending email - From: VMS <sulboymnyama@gmail.com>, To: ['coderxsultan@gmail.com']
+DEBUG 2025-12-09 10:03:14,520 utils 📧 Subject: Your Secure OTP Code
+INFO 2025-12-09 10:03:27,600 utils ✅ Successfully sent OTP email to coderxsultan@gmail.com
+INFO 2025-12-09 10:03:27,600 tasks ✅ Email sent successfully to coderxsultan@gmail.com
+INFO 2025-12-09 10:03:27,600 tasks 📊 Task completed with results:
+INFO 2025-12-09 10:03:27,600 tasks 📱 SMS Status: ❌ Failed - SMS service not configured
+INFO 2025-12-09 10:03:27,600 tasks 📧 Email Status: ✅ Success - OTP sent successfully
+INFO 2025-12-09 10:03:27,601 tasks ================================================================================
+INFO 2025-12-09 10:03:27,604 views 📨 Task completed: {'sms': {'sent': False, 'message': 'SMS service not configured', 'to': '+255655222666'}, 'email': {'sent': True, 'message': 'OTP sent successfully', 'to': 'coderxsultan@gmail.com'}}
+INFO 2025-12-09 10:03:27,609 views 📝 Audit log created successfully
+INFO 2025-12-09 10:03:27,609 views ✅ OTP request processed successfully. Response: {'message': 'Warning: Failed to send SMS. Please try again. Check your email for the code.', 'phone_number': '+255655222666', 'sms_sent': False, 'email_sent': True, 'expires_in_minutes': 5}
+INFO 2025-12-09 10:03:27,609 views ================================================================================
+INFO 2025-12-09 10:03:27,610 log "POST /api/visits/request_otp/ HTTP/1.1" 200 180
+INFO 2025-12-09 10:06:12,594 autoreload /home/hamy/Desktop/vms-backend/core/utils.py changed, reloading.
+INFO 2025-12-09 10:06:12,977 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 10:06:13,054 services Telerivet API credentials not configured.
+INFO 2025-12-09 10:09:00,035 log "GET /api/hosts/for_kiosk/ HTTP/1.1" 200 176
+INFO 2025-12-09 10:09:24,172 log "GET /admin/core/visitor/ HTTP/1.1" 200 17865
+INFO 2025-12-09 10:09:24,185 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-09 10:09:30,798 log "POST /admin/core/visitor/ HTTP/1.1" 200 13920
+INFO 2025-12-09 10:09:31,986 log "POST /admin/core/visitor/ HTTP/1.1" 302 0
+INFO 2025-12-09 10:09:31,996 log "GET /admin/core/visitor/ HTTP/1.1" 200 15382
+INFO 2025-12-09 10:09:32,049 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-09 10:09:44,581 log "POST /api/visits/check_in/ HTTP/1.1" 201 103
+INFO 2025-12-09 10:09:44,612 views ================================================================================
+INFO 2025-12-09 10:09:44,612 views 🔄 Processing OTP request
+DEBUG 2025-12-09 10:09:44,612 views 📥 Request data: {'phone_number': '+255655666555', 'visit_id': 34, 'email': 'coderxsultan@gmail.com'}
+INFO 2025-12-09 10:09:44,612 views 📱 Processing OTP request for phone: +255655666555
+INFO 2025-12-09 10:09:44,612 views 📧 Email provided: coderxsultan@gmail.com
+INFO 2025-12-09 10:09:44,613 views 🏢 Visit ID: 34
+INFO 2025-12-09 10:09:44,614 views ✅ Found visit: 34
+INFO 2025-12-09 10:09:44,614 views 🔑 Generating OTP...
+INFO 2025-12-09 10:09:44,620 views ✅ OTP generated: 117717 (ID: 25)
+INFO 2025-12-09 10:09:44,620 views 🚀 Queueing OTP sending task...
+INFO 2025-12-09 10:09:44,664 tasks ================================================================================
+INFO 2025-12-09 10:09:44,664 tasks 🚀 Starting OTP sending task
+INFO 2025-12-09 10:09:44,664 tasks 📱 Phone: +255655666555
+INFO 2025-12-09 10:09:44,664 tasks 📧 Email: coderxsultan@gmail.com
+INFO 2025-12-09 10:09:44,664 tasks 🔑 OTP Code: 117717
+WARNING 2025-12-09 10:09:44,664 tasks ⚠️ Telerivet API not configured. SMS will not be sent.
+INFO 2025-12-09 10:09:44,665 tasks 📧 Attempting to send OTP email to coderxsultan@gmail.com
+INFO 2025-12-09 10:09:44,665 utils 📧 Preparing to send OTP email to: coderxsultan@gmail.com
+DEBUG 2025-12-09 10:09:44,665 utils 📤 Sending email - From: VMS <sulboymnyama@gmail.com>, To: ['coderxsultan@gmail.com']
+DEBUG 2025-12-09 10:09:44,665 utils 📧 Subject: Your VMS Verification Code
+INFO 2025-12-09 10:09:58,194 utils ✅ Successfully sent OTP email to coderxsultan@gmail.com
+INFO 2025-12-09 10:09:58,195 tasks ✅ Email sent successfully to coderxsultan@gmail.com
+INFO 2025-12-09 10:09:58,195 tasks 📊 Task completed with results:
+INFO 2025-12-09 10:09:58,195 tasks 📱 SMS Status: ❌ Failed - SMS service not configured
+INFO 2025-12-09 10:09:58,195 tasks 📧 Email Status: ✅ Success - OTP sent successfully
+INFO 2025-12-09 10:09:58,195 tasks ================================================================================
+INFO 2025-12-09 10:09:58,198 views 📨 Task completed: {'sms': {'sent': False, 'message': 'SMS service not configured', 'to': '+255655666555'}, 'email': {'sent': True, 'message': 'OTP sent successfully', 'to': 'coderxsultan@gmail.com'}}
+INFO 2025-12-09 10:09:58,203 views 📝 Audit log created successfully
+INFO 2025-12-09 10:09:58,203 views ✅ OTP request processed successfully. Response: {'message': 'Warning: Failed to send SMS. Please try again. Check your email for the code.', 'phone_number': '+255655666555', 'sms_sent': False, 'email_sent': True, 'expires_in_minutes': 5}
+INFO 2025-12-09 10:09:58,203 views ================================================================================
+INFO 2025-12-09 10:09:58,204 log "POST /api/visits/request_otp/ HTTP/1.1" 200 180
+WARNING 2025-12-09 10:11:15,116 log Unauthorized: /api/visits/verify_otp/
+WARNING 2025-12-09 10:11:15,116 log "POST /api/visits/verify_otp/ HTTP/1.1" 401 58
+INFO 2025-12-09 10:11:26,764 views ================================================================================
+INFO 2025-12-09 10:11:26,764 views 🔄 Processing OTP request
+DEBUG 2025-12-09 10:11:26,765 views 📥 Request data: {'phone_number': '+255655666555', 'visit_id': 34, 'email': 'coderxsultan@gmail.com'}
+INFO 2025-12-09 10:11:26,765 views 📱 Processing OTP request for phone: +255655666555
+INFO 2025-12-09 10:11:26,765 views 📧 Email provided: coderxsultan@gmail.com
+INFO 2025-12-09 10:11:26,765 views 🏢 Visit ID: 34
+INFO 2025-12-09 10:11:26,766 views ✅ Found visit: 34
+INFO 2025-12-09 10:11:26,767 views 🔑 Generating OTP...
+INFO 2025-12-09 10:11:26,778 views ✅ OTP generated: 948131 (ID: 26)
+INFO 2025-12-09 10:11:26,778 views 🚀 Queueing OTP sending task...
+INFO 2025-12-09 10:11:26,779 tasks ================================================================================
+INFO 2025-12-09 10:11:26,779 tasks 🚀 Starting OTP sending task
+INFO 2025-12-09 10:11:26,779 tasks 📱 Phone: +255655666555
+INFO 2025-12-09 10:11:26,779 tasks 📧 Email: coderxsultan@gmail.com
+INFO 2025-12-09 10:11:26,779 tasks 🔑 OTP Code: 948131
+WARNING 2025-12-09 10:11:26,779 tasks ⚠️ Telerivet API not configured. SMS will not be sent.
+INFO 2025-12-09 10:11:26,779 tasks 📧 Attempting to send OTP email to coderxsultan@gmail.com
+INFO 2025-12-09 10:11:26,779 utils 📧 Preparing to send OTP email to: coderxsultan@gmail.com
+DEBUG 2025-12-09 10:11:26,780 utils 📤 Sending email - From: VMS <sulboymnyama@gmail.com>, To: ['coderxsultan@gmail.com']
+DEBUG 2025-12-09 10:11:26,780 utils 📧 Subject: Your VMS Verification Code
+INFO 2025-12-09 10:11:34,560 utils ✅ Successfully sent OTP email to coderxsultan@gmail.com
+INFO 2025-12-09 10:11:34,560 tasks ✅ Email sent successfully to coderxsultan@gmail.com
+INFO 2025-12-09 10:11:34,561 tasks 📊 Task completed with results:
+INFO 2025-12-09 10:11:34,561 tasks 📱 SMS Status: ❌ Failed - SMS service not configured
+INFO 2025-12-09 10:11:34,561 tasks 📧 Email Status: ✅ Success - OTP sent successfully
+INFO 2025-12-09 10:11:34,561 tasks ================================================================================
+INFO 2025-12-09 10:11:34,563 views 📨 Task completed: {'sms': {'sent': False, 'message': 'SMS service not configured', 'to': '+255655666555'}, 'email': {'sent': True, 'message': 'OTP sent successfully', 'to': 'coderxsultan@gmail.com'}}
+INFO 2025-12-09 10:11:34,568 views 📝 Audit log created successfully
+INFO 2025-12-09 10:11:34,569 views ✅ OTP request processed successfully. Response: {'message': 'Warning: Failed to send SMS. Please try again. Check your email for the code.', 'phone_number': '+255655666555', 'sms_sent': False, 'email_sent': True, 'expires_in_minutes': 5}
+INFO 2025-12-09 10:11:34,569 views ================================================================================
+INFO 2025-12-09 10:11:34,569 log "POST /api/visits/request_otp/ HTTP/1.1" 200 180
+WARNING 2025-12-09 10:11:57,503 log Unauthorized: /api/visits/verify_otp/
+WARNING 2025-12-09 10:11:57,503 log "POST /api/visits/verify_otp/ HTTP/1.1" 401 58
+INFO 2025-12-09 10:16:32,170 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 10:16:32,518 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 10:16:32,593 services Telerivet API credentials not configured.
+INFO 2025-12-09 10:16:33,719 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 10:16:34,042 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 10:16:34,114 services Telerivet API credentials not configured.
+INFO 2025-12-09 10:16:35,245 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 10:16:35,561 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 10:16:53,831 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 10:16:54,132 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 10:16:54,202 services Telerivet API credentials not configured.
+INFO 2025-12-09 10:17:02,522 views ================================================================================
+INFO 2025-12-09 10:17:02,522 views 🔍 Processing OTP verification
+DEBUG 2025-12-09 10:17:02,522 views 📥 Request data: {'phone_number': '+255655666555', 'code': '948131', 'visit_id': 34, 'email': 'coderxsultan@gmail.com'}
+INFO 2025-12-09 10:17:02,522 views 🔑 Verifying OTP for phone: +255655666555
+INFO 2025-12-09 10:17:02,522 views 🏢 Visit ID: 34
+INFO 2025-12-09 10:17:02,524 views ✅ Found visit: 34
+INFO 2025-12-09 10:17:02,524 views 🔐 Verifying OTP...
+ERROR 2025-12-09 10:17:02,525 views ❌ OTP verification failed: OTP has expired
+WARNING 2025-12-09 10:17:02,525 log Bad Request: /api/visits/verify_otp/
+WARNING 2025-12-09 10:17:02,526 log "POST /api/visits/verify_otp/ HTTP/1.1" 400 27
+INFO 2025-12-09 10:17:05,743 views ================================================================================
+INFO 2025-12-09 10:17:05,743 views 🔄 Processing OTP request
+DEBUG 2025-12-09 10:17:05,744 views 📥 Request data: {'phone_number': '+255655666555', 'visit_id': 34, 'email': 'coderxsultan@gmail.com'}
+INFO 2025-12-09 10:17:05,768 views 📱 Processing OTP request for phone: +255655666555
+INFO 2025-12-09 10:17:05,768 views 📧 Email provided: coderxsultan@gmail.com
+INFO 2025-12-09 10:17:05,768 views 🏢 Visit ID: 34
+INFO 2025-12-09 10:17:05,769 views ✅ Found visit: 34
+INFO 2025-12-09 10:17:05,769 views 🔑 Generating OTP...
+INFO 2025-12-09 10:17:05,780 views ✅ OTP generated: 321280 (ID: 27)
+INFO 2025-12-09 10:17:05,780 views 🚀 Queueing OTP sending task...
+INFO 2025-12-09 10:17:05,822 tasks ================================================================================
+INFO 2025-12-09 10:17:05,822 tasks 🚀 Starting OTP sending task
+INFO 2025-12-09 10:17:05,822 tasks 📱 Phone: +255655666555
+INFO 2025-12-09 10:17:05,822 tasks 📧 Email: coderxsultan@gmail.com
+INFO 2025-12-09 10:17:05,822 tasks 🔑 OTP Code: 321280
+WARNING 2025-12-09 10:17:05,822 tasks ⚠️ Telerivet API not configured. SMS will not be sent.
+INFO 2025-12-09 10:17:05,822 tasks 📧 Attempting to send OTP email to coderxsultan@gmail.com
+INFO 2025-12-09 10:17:05,822 utils 📧 Preparing to send OTP email to: coderxsultan@gmail.com
+DEBUG 2025-12-09 10:17:05,823 utils 📤 Sending email - From: VMS <sulboymnyama@gmail.com>, To: ['coderxsultan@gmail.com']
+DEBUG 2025-12-09 10:17:05,824 utils 📧 Subject: Your VMS Verification Code
+INFO 2025-12-09 10:17:09,214 utils ✅ Successfully sent OTP email to coderxsultan@gmail.com
+INFO 2025-12-09 10:17:09,214 tasks ✅ Email sent successfully to coderxsultan@gmail.com
+INFO 2025-12-09 10:17:09,215 tasks 📊 Task completed with results:
+INFO 2025-12-09 10:17:09,215 tasks 📱 SMS Status: ❌ Failed - SMS service not configured
+INFO 2025-12-09 10:17:09,215 tasks 📧 Email Status: ✅ Success - OTP sent successfully
+INFO 2025-12-09 10:17:09,215 tasks ================================================================================
+INFO 2025-12-09 10:17:09,219 views 📨 Task completed: {'sms': {'sent': False, 'message': 'SMS service not configured', 'to': '+255655666555'}, 'email': {'sent': True, 'message': 'OTP sent successfully', 'to': 'coderxsultan@gmail.com'}}
+INFO 2025-12-09 10:17:09,225 views 📝 Audit log created successfully
+INFO 2025-12-09 10:17:09,225 views ✅ OTP request processed successfully. Response: {'message': 'Warning: Failed to send SMS. Please try again. Check your email for the code.', 'phone_number': '+255655666555', 'sms_sent': False, 'email_sent': True, 'expires_in_minutes': 5}
+INFO 2025-12-09 10:17:09,225 views ================================================================================
+INFO 2025-12-09 10:17:09,226 log "POST /api/visits/request_otp/ HTTP/1.1" 200 180
+INFO 2025-12-09 10:17:26,427 views ================================================================================
+INFO 2025-12-09 10:17:26,428 views 🔍 Processing OTP verification
+DEBUG 2025-12-09 10:17:26,428 views 📥 Request data: {'phone_number': '+255655666555', 'code': '321280', 'visit_id': 34, 'email': 'coderxsultan@gmail.com'}
+INFO 2025-12-09 10:17:26,428 views 🔑 Verifying OTP for phone: +255655666555
+INFO 2025-12-09 10:17:26,428 views 🏢 Visit ID: 34
+INFO 2025-12-09 10:17:26,429 views ✅ Found visit: 34
+INFO 2025-12-09 10:17:26,429 views 🔐 Verifying OTP...
+INFO 2025-12-09 10:17:26,440 views ✅ Updated visit 34 status to 'pending_approval'
+INFO 2025-12-09 10:17:26,451 views 📝 Audit log created successfully
+INFO 2025-12-09 10:17:26,451 views ✅ OTP verification processed successfully
+INFO 2025-12-09 10:17:26,451 views ================================================================================
+INFO 2025-12-09 10:17:26,452 log "POST /api/visits/verify_otp/ HTTP/1.1" 200 1131
+INFO 2025-12-09 10:17:46,440 log "GET /admin/core/visitor/ HTTP/1.1" 200 17874
+INFO 2025-12-09 10:17:46,453 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-09 10:17:52,507 log "GET /admin/core/otp/ HTTP/1.1" 200 19756
+INFO 2025-12-09 10:17:52,522 log "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2025-12-09 10:17:52,522 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-09 10:18:51,556 log "GET /admin/core/card/ HTTP/1.1" 200 27182
+INFO 2025-12-09 10:18:51,571 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-09 10:18:56,277 log "GET /admin/core/visit/ HTTP/1.1" 200 20006
+INFO 2025-12-09 10:18:56,291 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-09 10:19:10,633 log "GET /admin/core/visit/34/change/ HTTP/1.1" 200 34851
+INFO 2025-12-09 10:19:10,645 log "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2025-12-09 10:19:10,649 log "GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+INFO 2025-12-09 10:19:10,650 log "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+INFO 2025-12-09 10:19:10,650 log "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2025-12-09 10:19:10,651 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-09 10:19:10,658 log "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2025-12-09 10:19:10,689 log "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2025-12-09 10:19:10,752 log "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 304 0
+INFO 2025-12-09 10:19:10,752 log "GET /static/admin/img/icon-clock.svg HTTP/1.1" 304 0
+INFO 2025-12-09 10:19:19,237 log "GET /admin/django_celery_results/taskresult/ HTTP/1.1" 200 15796
+INFO 2025-12-09 10:19:19,251 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-09 10:19:23,427 log "GET /admin/core/visitor/ HTTP/1.1" 200 17874
+INFO 2025-12-09 10:19:23,440 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-09 10:19:25,598 log "GET /admin/core/visitor/19/change/ HTTP/1.1" 200 18661
+INFO 2025-12-09 10:19:25,612 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-09 10:19:30,662 log "GET /admin/core/visit/ HTTP/1.1" 200 20006
+INFO 2025-12-09 10:19:30,676 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-09 10:19:37,938 log "GET /admin/core/auditlog/ HTTP/1.1" 200 41026
+INFO 2025-12-09 10:19:37,952 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-09 10:22:29,772 autoreload /home/hamy/Desktop/vms-backend/core/utils.py changed, reloading.
+INFO 2025-12-09 10:22:30,168 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 10:22:30,242 services Telerivet API credentials not configured.
+INFO 2025-12-09 10:23:42,020 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 10:23:42,359 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 10:23:42,435 services Telerivet API credentials not configured.
+INFO 2025-12-09 10:29:43,615 log "GET /api/hosts/for_kiosk/ HTTP/1.1" 200 176
+INFO 2025-12-09 10:30:05,011 log "POST /api/visits/check_in/ HTTP/1.1" 201 103
+INFO 2025-12-09 10:30:05,045 views ================================================================================
+INFO 2025-12-09 10:30:05,045 views 🔄 Processing OTP request
+DEBUG 2025-12-09 10:30:05,045 views 📥 Request data: {'phone_number': '+255655226227', 'visit_id': 35, 'email': 'sultankvanny@gmail.com'}
+INFO 2025-12-09 10:30:05,045 views 📱 Processing OTP request for phone: +255655226227
+INFO 2025-12-09 10:30:05,045 views 📧 Email provided: sultankvanny@gmail.com
+INFO 2025-12-09 10:30:05,045 views 🏢 Visit ID: 35
+INFO 2025-12-09 10:30:05,047 views ✅ Found visit: 35
+INFO 2025-12-09 10:30:05,047 views 🔑 Generating OTP...
+INFO 2025-12-09 10:30:05,053 views ✅ OTP generated: 094271 (ID: 28)
+INFO 2025-12-09 10:30:05,053 views 🚀 Queueing OTP sending task...
+INFO 2025-12-09 10:30:05,095 tasks ================================================================================
+INFO 2025-12-09 10:30:05,095 tasks 🚀 Starting OTP sending task
+INFO 2025-12-09 10:30:05,095 tasks 📱 Phone: +255655226227
+INFO 2025-12-09 10:30:05,095 tasks 📧 Email: sultankvanny@gmail.com
+INFO 2025-12-09 10:30:05,095 tasks 🔑 OTP Code: 094271
+WARNING 2025-12-09 10:30:05,095 tasks ⚠️ Telerivet API not configured. SMS will not be sent.
+INFO 2025-12-09 10:30:05,095 tasks 📧 Attempting to send OTP email to sultankvanny@gmail.com
+INFO 2025-12-09 10:30:05,095 utils 📧 Preparing to send OTP email to: sultankvanny@gmail.com
+DEBUG 2025-12-09 10:30:05,096 utils 📤 Sending email - From: VMS <sulboymnyama@gmail.com>, To: ['sultankvanny@gmail.com']
+DEBUG 2025-12-09 10:30:05,096 utils 📧 Subject: Your VMS Verification Code
+INFO 2025-12-09 10:30:27,864 utils ✅ Successfully sent OTP email to sultankvanny@gmail.com
+INFO 2025-12-09 10:30:27,865 tasks ✅ Email sent successfully to sultankvanny@gmail.com
+INFO 2025-12-09 10:30:27,865 tasks 📊 Task completed with results:
+INFO 2025-12-09 10:30:27,865 tasks 📱 SMS Status: ❌ Failed - SMS service not configured
+INFO 2025-12-09 10:30:27,865 tasks 📧 Email Status: ✅ Success - OTP sent successfully
+INFO 2025-12-09 10:30:27,865 tasks ================================================================================
+INFO 2025-12-09 10:30:27,868 views 📨 Task completed: {'sms': {'sent': False, 'message': 'SMS service not configured', 'to': '+255655226227'}, 'email': {'sent': True, 'message': 'OTP sent successfully', 'to': 'sultankvanny@gmail.com'}}
+INFO 2025-12-09 10:30:27,874 views 📝 Audit log created successfully
+INFO 2025-12-09 10:30:27,874 views ✅ OTP request processed successfully. Response: {'message': 'Warning: Failed to send SMS. Please try again. Check your email for the code.', 'phone_number': '+255655226227', 'sms_sent': False, 'email_sent': True, 'expires_in_minutes': 5}
+INFO 2025-12-09 10:30:27,874 views ================================================================================
+INFO 2025-12-09 10:30:27,875 log "POST /api/visits/request_otp/ HTTP/1.1" 200 180
+INFO 2025-12-09 10:30:58,155 views ================================================================================
+INFO 2025-12-09 10:30:58,155 views 🔍 Processing OTP verification
+DEBUG 2025-12-09 10:30:58,155 views 📥 Request data: {'phone_number': '+255655226227', 'code': '094271', 'visit_id': 35, 'email': 'sultankvanny@gmail.com'}
+INFO 2025-12-09 10:30:58,155 views 🔑 Verifying OTP for phone: +255655226227
+INFO 2025-12-09 10:30:58,155 views 🏢 Visit ID: 35
+INFO 2025-12-09 10:30:58,157 views ✅ Found visit: 35
+INFO 2025-12-09 10:30:58,157 views 🔐 Verifying OTP...
+ERROR 2025-12-09 10:30:58,162 views ❌ Error during visit update: name 'transaction' is not defined
+Traceback (most recent call last):
+  File "/home/hamy/Desktop/vms-backend/core/views.py", line 542, in verify_otp
+    with transaction.atomic():
+         ^^^^^^^^^^^
+NameError: name 'transaction' is not defined
+INFO 2025-12-09 10:30:58,174 views 📝 Audit log created successfully
+INFO 2025-12-09 10:30:58,174 views ✅ OTP verification processed successfully
+INFO 2025-12-09 10:30:58,174 views ================================================================================
+INFO 2025-12-09 10:30:58,174 log "POST /api/visits/verify_otp/ HTTP/1.1" 200 1186
+INFO 2025-12-09 10:32:28,106 log "GET /admin/core/visit/ HTTP/1.1" 200 20623
+INFO 2025-12-09 10:32:28,120 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-09 10:32:31,811 log "GET /admin/core/visit/35/change/ HTTP/1.1" 200 34916
+INFO 2025-12-09 10:32:31,827 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-09 10:34:10,446 autoreload /home/hamy/Desktop/vms-backend/core/utils.py changed, reloading.
+INFO 2025-12-09 10:34:10,810 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 10:34:13,954 autoreload /home/hamy/Desktop/vms-backend/core/utils.py changed, reloading.
+INFO 2025-12-09 10:34:14,250 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 10:34:14,320 services Telerivet API credentials not configured.
+INFO 2025-12-09 10:36:16,519 autoreload /home/hamy/Desktop/vms-backend/core/utils.py changed, reloading.
+INFO 2025-12-09 10:36:16,839 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 10:36:34,103 autoreload /home/hamy/Desktop/vms-backend/core/utils.py changed, reloading.
+INFO 2025-12-09 10:36:34,402 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 10:36:34,475 services Telerivet API credentials not configured.
+INFO 2025-12-09 10:54:08,356 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 10:54:08,436 services Telerivet API credentials not configured.
+INFO 2025-12-09 10:56:11,496 log "GET /api/hosts/for_kiosk/ HTTP/1.1" 200 176
+INFO 2025-12-09 10:56:35,059 log "POST /api/visits/check_in/ HTTP/1.1" 201 103
+INFO 2025-12-09 10:56:35,100 views ================================================================================
+INFO 2025-12-09 10:56:35,100 views 🔄 Processing OTP request
+DEBUG 2025-12-09 10:56:35,101 views 📥 Request data: {'phone_number': '+255655226225', 'visit_id': 36, 'email': 'sultankvanny@gmail.com'}
+INFO 2025-12-09 10:56:35,101 views 📱 Processing OTP request for phone: +255655226225
+INFO 2025-12-09 10:56:35,101 views 📧 Email provided: sultankvanny@gmail.com
+INFO 2025-12-09 10:56:35,101 views 🏢 Visit ID: 36
+INFO 2025-12-09 10:56:35,102 views ✅ Found visit: 36
+INFO 2025-12-09 10:56:35,102 views 🔑 Generating OTP...
+INFO 2025-12-09 10:56:35,110 views ✅ OTP generated: 361788 (ID: 29)
+INFO 2025-12-09 10:56:35,110 views 🚀 Queueing OTP sending task...
+INFO 2025-12-09 10:56:35,158 tasks ================================================================================
+INFO 2025-12-09 10:56:35,158 tasks 🚀 Starting OTP sending task
+INFO 2025-12-09 10:56:35,158 tasks 📱 Phone: +255655226225
+INFO 2025-12-09 10:56:35,158 tasks 📧 Email: sultankvanny@gmail.com
+INFO 2025-12-09 10:56:35,158 tasks 🔑 OTP Code: 361788
+WARNING 2025-12-09 10:56:35,158 tasks ⚠️ Telerivet API not configured. SMS will not be sent.
+INFO 2025-12-09 10:56:35,158 tasks 📧 Attempting to send OTP email to sultankvanny@gmail.com
+INFO 2025-12-09 10:56:35,158 utils 📧 Preparing to send OTP email to: sultankvanny@gmail.com
+DEBUG 2025-12-09 10:56:35,160 utils 📤 Sending email - From: VMS <sulboymnyama@gmail.com>, To: ['sultankvanny@gmail.com']
+DEBUG 2025-12-09 10:56:35,160 utils 📧 Subject: Your VMS Verification Code
+INFO 2025-12-09 10:56:58,884 utils ✅ Successfully sent OTP email to sultankvanny@gmail.com
+INFO 2025-12-09 10:56:58,885 tasks ✅ Email sent successfully to sultankvanny@gmail.com
+INFO 2025-12-09 10:56:58,885 tasks 📊 Task completed with results:
+INFO 2025-12-09 10:56:58,885 tasks 📱 SMS Status: ❌ Failed - SMS service not configured
+INFO 2025-12-09 10:56:58,885 tasks 📧 Email Status: ✅ Success - OTP sent successfully
+INFO 2025-12-09 10:56:58,885 tasks ================================================================================
+INFO 2025-12-09 10:56:58,889 views 📨 Task completed: {'sms': {'sent': False, 'message': 'SMS service not configured', 'to': '+255655226225'}, 'email': {'sent': True, 'message': 'OTP sent successfully', 'to': 'sultankvanny@gmail.com'}}
+INFO 2025-12-09 10:56:58,895 views 📝 Audit log created successfully
+INFO 2025-12-09 10:56:58,895 views ✅ OTP request processed successfully. Response: {'message': 'Warning: Failed to send SMS. Please try again. Check your email for the code.', 'phone_number': '+255655226225', 'sms_sent': False, 'email_sent': True, 'expires_in_minutes': 5}
+INFO 2025-12-09 10:56:58,895 views ================================================================================
+INFO 2025-12-09 10:56:58,896 log "POST /api/visits/request_otp/ HTTP/1.1" 200 180
+INFO 2025-12-09 10:57:19,944 views ================================================================================
+INFO 2025-12-09 10:57:19,944 views 🔍 Processing OTP verification
+DEBUG 2025-12-09 10:57:19,944 views 📥 Request data: {'phone_number': '+255655226225', 'code': '361788', 'visit_id': 36, 'email': 'sultankvanny@gmail.com'}
+INFO 2025-12-09 10:57:19,944 views 🔑 Verifying OTP for phone: +255655226225
+INFO 2025-12-09 10:57:19,944 views 🏢 Visit ID: 36
+INFO 2025-12-09 10:57:19,946 views ✅ Found visit: 36
+INFO 2025-12-09 10:57:19,946 views 🔐 Verifying OTP...
+INFO 2025-12-09 10:57:19,953 views ✅ Assigned card 12 to visit 36
+INFO 2025-12-09 10:57:19,953 views ✅ Updated visit 36 status to 'pending_approval'
+INFO 2025-12-09 10:57:49,161 utils ✅ Welcome email sent to sultankvanny@gmail.com for visit 36
+INFO 2025-12-09 10:57:49,162 views ✅ Sent welcome email to sultankvanny@gmail.com
+INFO 2025-12-09 10:57:49,176 views 📝 Audit log created successfully
+INFO 2025-12-09 10:57:49,176 views ✅ OTP verification processed successfully
+INFO 2025-12-09 10:57:49,176 views ================================================================================
+INFO 2025-12-09 10:57:49,176 log "POST /api/visits/verify_otp/ HTTP/1.1" 200 1380
+INFO 2025-12-09 11:00:21,479 log "GET /api/hosts/for_kiosk/ HTTP/1.1" 200 176
+INFO 2025-12-09 11:03:01,692 log "GET /api/hosts/for_kiosk/ HTTP/1.1" 200 176
+INFO 2025-12-09 11:22:11,795 log "GET /api/hosts/for_kiosk/ HTTP/1.1" 200 176
+WARNING 2025-12-09 11:22:11,919 log Not Found: /api/api/visitors/names/
+WARNING 2025-12-09 11:22:11,919 log "GET /api/api/visitors/names/ HTTP/1.1" 404 42403
+INFO 2025-12-09 11:24:29,672 log "GET /api/hosts/for_kiosk/ HTTP/1.1" 200 176
+WARNING 2025-12-09 11:24:29,813 log Not Found: /api/api/visitors/names/
+WARNING 2025-12-09 11:24:29,814 log "GET /api/api/visitors/names/ HTTP/1.1" 404 42403
+INFO 2025-12-09 11:25:12,831 log "POST /api/visits/check_in/ HTTP/1.1" 201 103
+WARNING 2025-12-09 11:25:12,875 log Too Many Requests: /api/visits/request_otp/
+WARNING 2025-12-09 11:25:12,876 log "POST /api/visits/request_otp/ HTTP/1.1" 429 35
+INFO 2025-12-09 11:29:08,265 autoreload /home/hamy/Desktop/vms-backend/vms/settings.py changed, reloading.
+INFO 2025-12-09 11:29:08,624 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 11:29:08,697 services Telerivet API credentials not configured.
+INFO 2025-12-09 11:29:11,883 autoreload /home/hamy/Desktop/vms-backend/vms/settings.py changed, reloading.
+INFO 2025-12-09 11:29:12,214 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 11:29:12,286 services Telerivet API credentials not configured.
+INFO 2025-12-09 11:29:17,572 log "GET /api/hosts/for_kiosk/ HTTP/1.1" 200 176
+WARNING 2025-12-09 11:29:17,592 log Not Found: /api/api/visitors/names/
+WARNING 2025-12-09 11:29:17,592 log "GET /api/api/visitors/names/ HTTP/1.1" 404 42403
+INFO 2025-12-09 11:30:19,258 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 11:30:19,326 services Telerivet API credentials not configured.
+INFO 2025-12-09 11:31:15,326 log "GET /api/hosts/for_kiosk/ HTTP/1.1" 200 176
+WARNING 2025-12-09 11:31:15,455 log Unauthorized: /api/visitors/names/
+WARNING 2025-12-09 11:31:15,455 log "GET /api/visitors/names/ HTTP/1.1" 401 58
+INFO 2025-12-09 11:32:10,707 log "POST /api/visits/check_in/ HTTP/1.1" 201 103
+INFO 2025-12-09 11:32:10,762 views ================================================================================
+INFO 2025-12-09 11:32:10,762 views 🔄 Processing OTP request
+DEBUG 2025-12-09 11:32:10,762 views 📥 Request data: {'phone_number': '+255655666555', 'visit_id': 38, 'email': 'coderxsultan@gmail.com'}
+INFO 2025-12-09 11:32:10,763 views 📱 Processing OTP request for phone: +255655666555
+INFO 2025-12-09 11:32:10,763 views 📧 Email provided: coderxsultan@gmail.com
+INFO 2025-12-09 11:32:10,763 views 🏢 Visit ID: 38
+INFO 2025-12-09 11:32:10,764 views ✅ Found visit: 38
+INFO 2025-12-09 11:32:10,764 views 🔑 Generating OTP...
+WARNING 2025-12-09 11:32:10,772 utils Cache error in increment_otp_rate_limit: 'Settings' object has no attribute 'OTP_RATE_LIMIT_HOURS'
+INFO 2025-12-09 11:32:10,772 views ✅ OTP generated: 783926 (ID: 30)
+INFO 2025-12-09 11:32:10,772 views 🚀 Queueing OTP sending task...
+INFO 2025-12-09 11:32:10,825 tasks ================================================================================
+INFO 2025-12-09 11:32:10,825 tasks 🚀 Starting OTP sending task
+INFO 2025-12-09 11:32:10,825 tasks 📱 Phone: +255655666555
+INFO 2025-12-09 11:32:10,825 tasks 📧 Email: coderxsultan@gmail.com
+INFO 2025-12-09 11:32:10,825 tasks 🔑 OTP Code: 783926
+WARNING 2025-12-09 11:32:10,825 tasks ⚠️ Telerivet API not configured. SMS will not be sent.
+INFO 2025-12-09 11:32:10,826 tasks 📧 Attempting to send OTP email to coderxsultan@gmail.com
+INFO 2025-12-09 11:32:10,826 utils 📧 Preparing to send OTP email to: coderxsultan@gmail.com
+DEBUG 2025-12-09 11:32:10,827 utils 📤 Sending email - From: VMS <sulboymnyama@gmail.com>, To: ['coderxsultan@gmail.com']
+DEBUG 2025-12-09 11:32:10,827 utils 📧 Subject: Your VMS System Verification Code
+INFO 2025-12-09 11:32:13,568 utils ✅ Successfully sent OTP email to coderxsultan@gmail.com
+INFO 2025-12-09 11:32:13,569 tasks ✅ Email sent successfully to coderxsultan@gmail.com
+INFO 2025-12-09 11:32:13,569 tasks 📊 Task completed with results:
+INFO 2025-12-09 11:32:13,569 tasks 📱 SMS Status: ❌ Failed - SMS service not configured
+INFO 2025-12-09 11:32:13,569 tasks 📧 Email Status: ✅ Success - OTP sent successfully
+INFO 2025-12-09 11:32:13,569 tasks ================================================================================
+INFO 2025-12-09 11:32:13,573 views 📨 Task completed: {'sms': {'sent': False, 'message': 'SMS service not configured', 'to': '+255655666555'}, 'email': {'sent': True, 'message': 'OTP sent successfully', 'to': 'coderxsultan@gmail.com'}}
+INFO 2025-12-09 11:32:13,578 views 📝 Audit log created successfully
+INFO 2025-12-09 11:32:13,578 views ✅ OTP request processed successfully. Response: {'message': 'Warning: Failed to send SMS. Please try again. Check your email for the code.', 'phone_number': '+255655666555', 'sms_sent': False, 'email_sent': True, 'expires_in_minutes': 5}
+INFO 2025-12-09 11:32:13,578 views ================================================================================
+INFO 2025-12-09 11:32:13,578 log "POST /api/visits/request_otp/ HTTP/1.1" 200 180
+INFO 2025-12-09 11:32:46,016 views ================================================================================
+INFO 2025-12-09 11:32:46,016 views 🔍 Processing OTP verification
+DEBUG 2025-12-09 11:32:46,017 views 📥 Request data: {'phone_number': '+255655666555', 'code': '783926', 'visit_id': 38, 'email': 'coderxsultan@gmail.com'}
+INFO 2025-12-09 11:32:46,017 views 🔑 Verifying OTP for phone: +255655666555
+INFO 2025-12-09 11:32:46,017 views 🏢 Visit ID: 38
+INFO 2025-12-09 11:32:46,018 views ✅ Found visit: 38
+INFO 2025-12-09 11:32:46,018 views 🔐 Verifying OTP...
+INFO 2025-12-09 11:32:46,028 views ✅ Assigned card 13 to visit 38
+INFO 2025-12-09 11:32:46,028 views ✅ Updated visit 38 status to 'pending_approval'
+INFO 2025-12-09 11:32:49,613 utils ✅ Welcome email sent to coderxsultan@gmail.com for visit 38
+INFO 2025-12-09 11:32:49,614 views ✅ Sent welcome email to coderxsultan@gmail.com
+INFO 2025-12-09 11:32:49,629 views 📝 Audit log created successfully
+INFO 2025-12-09 11:32:49,629 views ✅ OTP verification processed successfully
+INFO 2025-12-09 11:32:49,629 views ================================================================================
+INFO 2025-12-09 11:32:49,630 log "POST /api/visits/verify_otp/ HTTP/1.1" 200 1379
+INFO 2025-12-09 11:33:43,060 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 11:33:43,459 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 11:33:43,534 services Telerivet API credentials not configured.
+INFO 2025-12-09 11:33:50,727 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 11:33:51,056 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 11:33:51,135 services Telerivet API credentials not configured.
+INFO 2025-12-09 11:35:17,202 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 11:35:17,508 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 11:35:17,585 services Telerivet API credentials not configured.
+INFO 2025-12-09 11:35:31,861 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 11:35:32,169 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 11:35:32,246 services Telerivet API credentials not configured.
+INFO 2025-12-09 11:39:42,093 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 11:39:42,408 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 11:39:42,485 services Telerivet API credentials not configured.
+INFO 2025-12-09 11:39:45,668 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 11:39:46,002 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 11:39:46,078 services Telerivet API credentials not configured.
+INFO 2025-12-09 11:40:03,711 log "GET /api/hosts/for_kiosk/ HTTP/1.1" 200 176
+WARNING 2025-12-09 11:40:03,733 log Unauthorized: /api/visitors/names/
+WARNING 2025-12-09 11:40:03,733 log "GET /api/visitors/names/ HTTP/1.1" 401 58
+INFO 2025-12-09 11:40:25,826 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 11:40:25,892 services Telerivet API credentials not configured.
+INFO 2025-12-09 11:40:29,360 log "GET /api/hosts/for_kiosk/ HTTP/1.1" 200 176
+WARNING 2025-12-09 11:40:29,382 log Unauthorized: /api/visitors/names/
+WARNING 2025-12-09 11:40:29,382 log "GET /api/visitors/names/ HTTP/1.1" 401 58
+INFO 2025-12-09 11:41:34,862 autoreload /home/hamy/Desktop/vms-backend/core/urls.py changed, reloading.
+INFO 2025-12-09 11:41:35,179 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 11:41:35,252 services Telerivet API credentials not configured.
+INFO 2025-12-09 11:42:32,995 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 11:42:33,291 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 11:42:33,364 services Telerivet API credentials not configured.
+INFO 2025-12-09 11:44:00,412 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 11:44:00,710 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 11:44:00,785 services Telerivet API credentials not configured.
+INFO 2025-12-09 11:44:04,953 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 11:44:05,261 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 11:44:05,336 services Telerivet API credentials not configured.
+INFO 2025-12-09 11:44:51,960 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 11:44:52,265 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 11:44:52,340 services Telerivet API credentials not configured.
+INFO 2025-12-09 11:45:51,080 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 11:45:51,378 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 11:45:51,452 services Telerivet API credentials not configured.
+INFO 2025-12-09 11:47:10,437 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 11:47:10,750 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 11:47:10,826 services Telerivet API credentials not configured.
+INFO 2025-12-09 11:47:13,983 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 11:47:14,301 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 11:47:14,378 services Telerivet API credentials not configured.
+INFO 2025-12-09 11:47:23,602 autoreload /home/hamy/Desktop/vms-backend/core/urls.py changed, reloading.
+INFO 2025-12-09 11:47:23,928 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 11:47:23,996 services Telerivet API credentials not configured.
+INFO 2025-12-09 11:47:26,162 autoreload /home/hamy/Desktop/vms-backend/core/urls.py changed, reloading.
+INFO 2025-12-09 11:47:26,493 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 11:47:26,565 services Telerivet API credentials not configured.
+INFO 2025-12-09 11:47:33,292 log "GET /api/hosts/for_kiosk/ HTTP/1.1" 200 176
+INFO 2025-12-09 11:47:33,309 log "GET /api/visitors/names/ HTTP/1.1" 200 53
+INFO 2025-12-09 11:53:03,338 log "POST /api/visits/check_in/ HTTP/1.1" 201 103
+INFO 2025-12-09 11:53:03,359 views ================================================================================
+INFO 2025-12-09 11:53:03,359 views 🔄 Processing OTP request
+DEBUG 2025-12-09 11:53:03,359 views 📥 Request data: {'phone_number': '+255655222666', 'visit_id': 39, 'email': 'coderxsultan@gmail.com'}
+INFO 2025-12-09 11:53:03,359 views 📱 Processing OTP request for phone: +255655222666
+INFO 2025-12-09 11:53:03,359 views 📧 Email provided: coderxsultan@gmail.com
+INFO 2025-12-09 11:53:03,359 views 🏢 Visit ID: 39
+INFO 2025-12-09 11:53:03,360 views ✅ Found visit: 39
+INFO 2025-12-09 11:53:03,360 views 🔑 Generating OTP...
+WARNING 2025-12-09 11:53:03,367 utils Cache error in increment_otp_rate_limit: 'Settings' object has no attribute 'OTP_RATE_LIMIT_HOURS'
+INFO 2025-12-09 11:53:03,368 views ✅ OTP generated: 827641 (ID: 31)
+INFO 2025-12-09 11:53:03,368 views 🚀 Queueing OTP sending task...
+INFO 2025-12-09 11:53:03,413 tasks ================================================================================
+INFO 2025-12-09 11:53:03,413 tasks 🚀 Starting OTP sending task
+INFO 2025-12-09 11:53:03,413 tasks 📱 Phone: +255655222666
+INFO 2025-12-09 11:53:03,413 tasks 📧 Email: coderxsultan@gmail.com
+INFO 2025-12-09 11:53:03,413 tasks 🔑 OTP Code: 827641
+WARNING 2025-12-09 11:53:03,413 tasks ⚠️ Telerivet API not configured. SMS will not be sent.
+INFO 2025-12-09 11:53:03,413 tasks 📧 Attempting to send OTP email to coderxsultan@gmail.com
+INFO 2025-12-09 11:53:03,413 utils 📧 Preparing to send OTP email to: coderxsultan@gmail.com
+DEBUG 2025-12-09 11:53:03,415 utils 📤 Sending email - From: VMS <sulboymnyama@gmail.com>, To: ['coderxsultan@gmail.com']
+DEBUG 2025-12-09 11:53:03,415 utils 📧 Subject: Your VMS System Verification Code
+INFO 2025-12-09 11:53:10,634 utils ✅ Successfully sent OTP email to coderxsultan@gmail.com
+INFO 2025-12-09 11:53:10,635 tasks ✅ Email sent successfully to coderxsultan@gmail.com
+INFO 2025-12-09 11:53:10,635 tasks 📊 Task completed with results:
+INFO 2025-12-09 11:53:10,635 tasks 📱 SMS Status: ❌ Failed - SMS service not configured
+INFO 2025-12-09 11:53:10,635 tasks 📧 Email Status: ✅ Success - OTP sent successfully
+INFO 2025-12-09 11:53:10,635 tasks ================================================================================
+INFO 2025-12-09 11:53:10,640 views 📨 Task completed: {'sms': {'sent': False, 'message': 'SMS service not configured', 'to': '+255655222666'}, 'email': {'sent': True, 'message': 'OTP sent successfully', 'to': 'coderxsultan@gmail.com'}}
+INFO 2025-12-09 11:53:10,645 views 📝 Audit log created successfully
+INFO 2025-12-09 11:53:10,645 views ✅ OTP request processed successfully. Response: {'message': 'Warning: Failed to send SMS. Please try again. Check your email for the code.', 'phone_number': '+255655222666', 'sms_sent': False, 'email_sent': True, 'expires_in_minutes': 5}
+INFO 2025-12-09 11:53:10,645 views ================================================================================
+INFO 2025-12-09 11:53:10,646 log "POST /api/visits/request_otp/ HTTP/1.1" 200 180
+INFO 2025-12-09 11:54:00,329 views ================================================================================
+INFO 2025-12-09 11:54:00,329 views 🔍 Processing OTP verification
+DEBUG 2025-12-09 11:54:00,329 views 📥 Request data: {'phone_number': '+255655222666', 'code': '827641', 'visit_id': 39, 'email': 'coderxsultan@gmail.com'}
+INFO 2025-12-09 11:54:00,330 views 🔑 Verifying OTP for phone: +255655222666
+INFO 2025-12-09 11:54:00,330 views 🏢 Visit ID: 39
+INFO 2025-12-09 11:54:00,331 views ✅ Found visit: 39
+INFO 2025-12-09 11:54:00,332 views 🔐 Verifying OTP...
+INFO 2025-12-09 11:54:00,340 views ✅ Assigned card 14 to visit 39
+INFO 2025-12-09 11:54:00,340 views ✅ Updated visit 39 status to 'pending_approval'
+INFO 2025-12-09 11:54:03,675 utils ✅ Welcome email sent to coderxsultan@gmail.com for visit 39
+INFO 2025-12-09 11:54:03,676 views ✅ Sent welcome email to coderxsultan@gmail.com
+INFO 2025-12-09 11:54:03,690 views 📝 Audit log created successfully
+INFO 2025-12-09 11:54:03,690 views ✅ OTP verification processed successfully
+INFO 2025-12-09 11:54:03,690 views ================================================================================
+INFO 2025-12-09 11:54:03,690 log "POST /api/visits/verify_otp/ HTTP/1.1" 200 1379
+INFO 2025-12-09 11:54:48,632 log "GET /admin/core/visit/35/change/ HTTP/1.1" 200 35101
+INFO 2025-12-09 11:54:48,652 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-09 11:54:51,636 log "GET /admin/core/visit/ HTTP/1.1" 200 23001
+INFO 2025-12-09 11:54:51,652 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-09 11:54:55,119 log "GET /admin/core/visit/39/change/ HTTP/1.1" 200 35128
+INFO 2025-12-09 11:54:55,134 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-09 12:01:40,836 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 12:01:41,232 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 12:01:41,312 services Telerivet API credentials not configured.
+INFO 2025-12-09 12:01:45,504 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 12:01:45,862 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 12:01:45,942 services Telerivet API credentials not configured.
+INFO 2025-12-09 12:02:40,672 log "GET /api/hosts/for_kiosk/ HTTP/1.1" 200 176
+INFO 2025-12-09 12:02:40,684 log "GET /api/visitors/names/ HTTP/1.1" 200 53
+INFO 2025-12-09 12:03:07,906 log "POST /api/visits/check_in/ HTTP/1.1" 201 103
+INFO 2025-12-09 12:03:07,932 views ================================================================================
+INFO 2025-12-09 12:03:07,932 views 🔄 Processing OTP request
+DEBUG 2025-12-09 12:03:07,932 views 📥 Request data: {'phone_number': '+255655225226', 'visit_id': 40, 'email': 'sultankvanny@gmail.com'}
+INFO 2025-12-09 12:03:07,932 views 📱 Processing OTP request for phone: +255655225226
+INFO 2025-12-09 12:03:07,932 views 📧 Email provided: sultankvanny@gmail.com
+INFO 2025-12-09 12:03:07,932 views 🏢 Visit ID: 40
+INFO 2025-12-09 12:03:07,934 views ✅ Found visit: 40
+INFO 2025-12-09 12:03:07,934 views 🔑 Generating OTP...
+WARNING 2025-12-09 12:03:07,942 utils Cache error in increment_otp_rate_limit: 'Settings' object has no attribute 'OTP_RATE_LIMIT_HOURS'
+INFO 2025-12-09 12:03:07,942 views ✅ OTP generated: 168430 (ID: 32)
+INFO 2025-12-09 12:03:07,942 views 🚀 Queueing OTP sending task...
+INFO 2025-12-09 12:03:07,996 tasks ================================================================================
+INFO 2025-12-09 12:03:07,996 tasks 🚀 Starting OTP sending task
+INFO 2025-12-09 12:03:07,997 tasks 📱 Phone: +255655225226
+INFO 2025-12-09 12:03:07,997 tasks 📧 Email: sultankvanny@gmail.com
+INFO 2025-12-09 12:03:07,997 tasks 🔑 OTP Code: 168430
+WARNING 2025-12-09 12:03:07,997 tasks ⚠️ Telerivet API not configured. SMS will not be sent.
+INFO 2025-12-09 12:03:07,997 tasks 📧 Attempting to send OTP email to sultankvanny@gmail.com
+INFO 2025-12-09 12:03:07,997 utils 📧 Preparing to send OTP email to: sultankvanny@gmail.com
+DEBUG 2025-12-09 12:03:07,999 utils 📤 Sending email - From: VMS <sulboymnyama@gmail.com>, To: ['sultankvanny@gmail.com']
+DEBUG 2025-12-09 12:03:07,999 utils 📧 Subject: Your VMS System Verification Code
+INFO 2025-12-09 12:03:12,535 utils ✅ Successfully sent OTP email to sultankvanny@gmail.com
+INFO 2025-12-09 12:03:12,536 tasks ✅ Email sent successfully to sultankvanny@gmail.com
+INFO 2025-12-09 12:03:12,536 tasks 📊 Task completed with results:
+INFO 2025-12-09 12:03:12,536 tasks 📱 SMS Status: ❌ Failed - SMS service not configured
+INFO 2025-12-09 12:03:12,536 tasks 📧 Email Status: ✅ Success - OTP sent successfully
+INFO 2025-12-09 12:03:12,536 tasks ================================================================================
+INFO 2025-12-09 12:03:12,540 views 📨 Task completed: {'sms': {'sent': False, 'message': 'SMS service not configured', 'to': '+255655225226'}, 'email': {'sent': True, 'message': 'OTP sent successfully', 'to': 'sultankvanny@gmail.com'}}
+INFO 2025-12-09 12:03:12,545 views 📝 Audit log created successfully
+INFO 2025-12-09 12:03:12,545 views ✅ OTP request processed successfully. Response: {'message': 'Warning: Failed to send SMS. Please try again. Check your email for the code.', 'phone_number': '+255655225226', 'sms_sent': False, 'email_sent': True, 'expires_in_minutes': 5}
+INFO 2025-12-09 12:03:12,545 views ================================================================================
+INFO 2025-12-09 12:03:12,546 log "POST /api/visits/request_otp/ HTTP/1.1" 200 180
+INFO 2025-12-09 12:03:24,212 views ================================================================================
+INFO 2025-12-09 12:03:24,212 views 🔍 Processing OTP verification
+DEBUG 2025-12-09 12:03:24,212 views 📥 Request data: {'phone_number': '+255655225226', 'code': '168430', 'visit_id': 40, 'email': 'sultankvanny@gmail.com'}
+INFO 2025-12-09 12:03:24,212 views 🔑 Verifying OTP for phone: +255655225226
+INFO 2025-12-09 12:03:24,212 views 🏢 Visit ID: 40
+INFO 2025-12-09 12:03:24,214 views ✅ Found visit: 40 | Current status: pending_otp
+INFO 2025-12-09 12:03:24,214 views 🔐 Verifying OTP...
+INFO 2025-12-09 12:03:24,232 views ✅ OTP verification successful!
+INFO 2025-12-09 12:03:24,232 views 📝 Starting visit update transaction...
+INFO 2025-12-09 12:03:24,233 views 📝 Refreshed visit status: pending_otp
+INFO 2025-12-09 12:03:24,233 views 🎫 Attempting to assign card...
+INFO 2025-12-09 12:03:24,235 views ✅ Assigned card 15 to visit 40
+INFO 2025-12-09 12:03:24,235 views ✅ Updated visit 40 status from 'pending_host_approval' to 'pending_host_approval'
+INFO 2025-12-09 12:03:24,236 views ✅ Confirmed new status: pending_host_approval
+INFO 2025-12-09 12:03:24,236 views 📧 Sending welcome email to sultankvanny@gmail.com...
+INFO 2025-12-09 12:03:28,327 utils ✅ Welcome email sent to sultankvanny@gmail.com for visit 40
+INFO 2025-12-09 12:03:28,327 views ✅ Sent welcome email to sultankvanny@gmail.com
+INFO 2025-12-09 12:03:28,332 views 📊 Final visit status: pending_host_approval
+INFO 2025-12-09 12:03:28,343 views 📝 Audit log created successfully
+INFO 2025-12-09 12:03:28,343 views ✅ OTP verification completed successfully
+INFO 2025-12-09 12:03:28,343 views ================================================================================
+INFO 2025-12-09 12:03:28,343 log "POST /api/visits/verify_otp/ HTTP/1.1" 200 1422
+INFO 2025-12-09 12:03:42,440 log "GET /admin/core/visit/ HTTP/1.1" 200 23609
+INFO 2025-12-09 12:03:42,454 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-09 12:03:44,073 log "GET /admin/core/visit/40/change/ HTTP/1.1" 200 35199
+INFO 2025-12-09 12:03:44,088 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-09 12:03:59,022 log "GET /admin/core/visit/ HTTP/1.1" 200 23609
+INFO 2025-12-09 12:03:59,052 log "GET /static/admin/img/search.svg HTTP/1.1" 200 607
+INFO 2025-12-09 12:03:59,090 log "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 593
+INFO 2025-12-09 12:03:59,091 log "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 593
+INFO 2025-12-09 12:03:59,092 log "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 928
+INFO 2025-12-09 12:03:59,092 log "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1761
+WARNING 2025-12-09 12:03:59,178 log Not Found: /favicon.ico
+INFO 2025-12-09 12:04:01,660 log "POST /admin/logout/ HTTP/1.1" 200 3475
+INFO 2025-12-09 12:04:01,678 log "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2025-12-09 12:04:01,678 log "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2025-12-09 12:04:01,678 log "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2025-12-09 12:04:01,680 log "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2025-12-09 12:04:01,680 log "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2025-12-09 12:04:01,680 log "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+WARNING 2025-12-09 12:04:11,624 log Not Found: /
+WARNING 2025-12-09 12:04:11,625 log "GET / HTTP/1.1" 404 2640
+WARNING 2025-12-09 12:04:29,988 log Not Found: /
+WARNING 2025-12-09 12:04:29,988 log "GET / HTTP/1.1" 404 2640
+WARNING 2025-12-09 12:04:30,394 log Not Found: /
+WARNING 2025-12-09 12:04:30,395 log "GET / HTTP/1.1" 404 2640
+WARNING 2025-12-09 12:04:30,650 log Not Found: /
+WARNING 2025-12-09 12:04:30,650 log "GET / HTTP/1.1" 404 2640
+WARNING 2025-12-09 12:05:03,231 log Not Found: /login/
+WARNING 2025-12-09 12:05:03,231 log "GET /login/ HTTP/1.1" 404 2676
+INFO 2025-12-09 12:09:06,472 autoreload /home/hamy/Desktop/vms-backend/vms/urls.py changed, reloading.
+INFO 2025-12-09 12:09:06,829 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 12:09:06,899 services Telerivet API credentials not configured.
+INFO 2025-12-09 12:09:08,049 autoreload /home/hamy/Desktop/vms-backend/vms/urls.py changed, reloading.
+INFO 2025-12-09 12:09:08,366 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 12:09:08,438 services Telerivet API credentials not configured.
+INFO 2025-12-09 12:09:11,619 autoreload /home/hamy/Desktop/vms-backend/vms/urls.py changed, reloading.
+INFO 2025-12-09 12:09:11,931 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 12:09:12,001 services Telerivet API credentials not configured.
+INFO 2025-12-09 12:09:13,140 autoreload /home/hamy/Desktop/vms-backend/vms/urls.py changed, reloading.
+INFO 2025-12-09 12:09:13,430 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 12:09:13,498 services Telerivet API credentials not configured.
+INFO 2025-12-09 12:09:31,817 autoreload /home/hamy/Desktop/vms-backend/vms/urls.py changed, reloading.
+INFO 2025-12-09 12:09:32,109 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 12:09:32,178 services Telerivet API credentials not configured.
+INFO 2025-12-09 12:09:34,321 autoreload /home/hamy/Desktop/vms-backend/vms/urls.py changed, reloading.
+INFO 2025-12-09 12:09:34,619 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 12:09:34,686 services Telerivet API credentials not configured.
+INFO 2025-12-09 12:09:58,059 autoreload /home/hamy/Desktop/vms-backend/vms/urls.py changed, reloading.
+INFO 2025-12-09 12:09:58,354 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 12:09:58,422 services Telerivet API credentials not configured.
+INFO 2025-12-09 12:10:00,563 autoreload /home/hamy/Desktop/vms-backend/vms/urls.py changed, reloading.
+INFO 2025-12-09 12:10:00,864 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 12:10:00,940 services Telerivet API credentials not configured.
+INFO 2025-12-09 12:10:07,074 autoreload /home/hamy/Desktop/vms-backend/vms/urls.py changed, reloading.
+INFO 2025-12-09 12:10:07,394 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 12:10:10,590 autoreload /home/hamy/Desktop/vms-backend/vms/urls.py changed, reloading.
+INFO 2025-12-09 12:10:10,874 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 12:10:10,946 services Telerivet API credentials not configured.
+INFO 2025-12-09 12:10:17,138 autoreload /home/hamy/Desktop/vms-backend/vms/urls.py changed, reloading.
+INFO 2025-12-09 12:10:17,430 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 12:10:17,502 services Telerivet API credentials not configured.
+INFO 2025-12-09 12:10:32,783 autoreload /home/hamy/Desktop/vms-backend/vms/urls.py changed, reloading.
+INFO 2025-12-09 12:10:33,118 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 12:10:33,192 services Telerivet API credentials not configured.
+INFO 2025-12-09 12:10:36,348 autoreload /home/hamy/Desktop/vms-backend/vms/urls.py changed, reloading.
+INFO 2025-12-09 12:10:36,650 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 12:10:41,867 autoreload /home/hamy/Desktop/vms-backend/vms/urls.py changed, reloading.
+INFO 2025-12-09 12:10:42,178 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 12:10:42,259 services Telerivet API credentials not configured.
+WARNING 2025-12-09 12:12:23,695 log Not Found: /
+WARNING 2025-12-09 12:12:23,696 log "GET / HTTP/1.1" 404 2784
+INFO 2025-12-09 12:12:34,718 autoreload /home/hamy/Desktop/vms-backend/vms/urls.py changed, reloading.
+INFO 2025-12-09 12:12:35,064 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 12:12:35,147 services Telerivet API credentials not configured.
+INFO 2025-12-09 12:12:35,784 log "GET / HTTP/1.1" 302 0
+ERROR 2025-12-09 12:12:35,804 log Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/views/decorators/http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/core/views.py", line 879, in login_view
+    return render(request, 'login.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: login.html
+ERROR 2025-12-09 12:12:35,805 log "GET /api/login/ HTTP/1.1" 500 104459
+INFO 2025-12-09 12:13:27,892 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 12:13:28,219 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 12:13:28,299 services Telerivet API credentials not configured.
+INFO 2025-12-09 12:13:32,379 log "GET /api/login/ HTTP/1.1" 200 3396
+INFO 2025-12-09 12:13:32,393 log "GET /static/core/css/dashboard.css HTTP/1.1" 304 0
+INFO 2025-12-09 12:13:44,101 log "POST /api/login/ HTTP/1.1" 302 0
+ERROR 2025-12-09 12:13:44,121 log Internal Server Error: /api/dashboard/
+Traceback (most recent call last):
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/core/views.py", line 920, in dashboard
+    return render(request, 'dashboard.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: dashboard.html
+ERROR 2025-12-09 12:13:44,123 log "GET /api/dashboard/ HTTP/1.1" 500 106435
+INFO 2025-12-09 12:13:56,888 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 12:13:57,229 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 12:13:57,313 services Telerivet API credentials not configured.
+ERROR 2025-12-09 12:13:57,540 log Internal Server Error: /api/dashboard/
+Traceback (most recent call last):
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/core/views.py", line 920, in dashboard
+    return render(request, 'core/dashboard.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: core/dashboard.html
+ERROR 2025-12-09 12:13:57,541 log "GET /api/dashboard/ HTTP/1.1" 500 106545
+INFO 2025-12-09 12:15:24,430 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 12:15:24,749 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 12:15:24,831 services Telerivet API credentials not configured.
+INFO 2025-12-09 12:21:41,182 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 12:21:41,528 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 12:21:41,608 services Telerivet API credentials not configured.
+INFO 2025-12-09 12:22:09,037 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 12:22:09,352 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 12:22:09,434 services Telerivet API credentials not configured.
+INFO 2025-12-09 12:22:17,662 autoreload /home/hamy/Desktop/vms-backend/core/urls.py changed, reloading.
+INFO 2025-12-09 12:22:17,975 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 12:22:18,056 services Telerivet API credentials not configured.
+INFO 2025-12-09 12:22:20,229 autoreload /home/hamy/Desktop/vms-backend/core/urls.py changed, reloading.
+INFO 2025-12-09 12:22:20,572 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 12:22:20,650 services Telerivet API credentials not configured.
+WARNING 2025-12-09 12:22:24,130 log Not Found: /api/dashboard/
+WARNING 2025-12-09 12:22:24,130 log "GET /api/dashboard/ HTTP/1.1" 404 21664
+INFO 2025-12-09 12:22:32,940 log "GET / HTTP/1.1" 200 7834
+INFO 2025-12-09 12:22:36,355 log "GET / HTTP/1.1" 200 7834
+INFO 2025-12-09 12:22:39,842 log "GET /api/login/ HTTP/1.1" 302 0
+INFO 2025-12-09 12:22:39,850 log "GET /api/host/dashboard/ HTTP/1.1" 200 11841
+WARNING 2025-12-09 12:22:47,200 log Method Not Allowed (GET): /api/logout/
+WARNING 2025-12-09 12:22:47,200 log "GET /api/logout/ HTTP/1.1" 405 0
+WARNING 2025-12-09 12:22:56,393 log Method Not Allowed (GET): /api/logout/
+WARNING 2025-12-09 12:22:56,393 log "GET /api/logout/ HTTP/1.1" 405 0
+INFO 2025-12-09 12:23:08,698 log "GET / HTTP/1.1" 200 7834
+INFO 2025-12-09 12:23:10,141 log "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-12-09 12:23:10,150 log "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3880
+INFO 2025-12-09 12:23:13,169 log "POST /admin/login/ HTTP/1.1" 302 0
+INFO 2025-12-09 12:23:13,187 log "GET /admin/ HTTP/1.1" 200 16858
+INFO 2025-12-09 12:23:13,240 log "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2025-12-09 12:23:13,287 log "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 978
+INFO 2025-12-09 12:23:13,287 log "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 689
+INFO 2025-12-09 12:23:17,485 log "GET /admin/core/visit/ HTTP/1.1" 200 23609
+INFO 2025-12-09 12:23:17,500 log "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2025-12-09 12:23:17,501 log "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-12-09 12:23:17,501 log "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-12-09 12:23:17,502 log "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-12-09 12:23:17,503 log "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-12-09 12:23:17,503 log "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-12-09 12:23:17,505 log "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-12-09 12:23:17,505 log "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-12-09 12:23:17,506 log "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-12-09 12:23:17,506 log "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2025-12-09 12:23:17,507 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-09 12:23:37,280 log "POST /admin/logout/ HTTP/1.1" 200 3475
+INFO 2025-12-09 12:23:41,625 log "GET / HTTP/1.1" 200 7834
+INFO 2025-12-09 12:23:44,321 log "GET /api/login/ HTTP/1.1" 200 3396
+INFO 2025-12-09 12:23:50,989 log "POST /api/login/ HTTP/1.1" 302 0
+ERROR 2025-12-09 12:23:51,016 log Internal Server Error: /api/host/dashboard/
+Traceback (most recent call last):
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/core/views.py", line 928, in host_dashboard
+    return render(request, 'core/host_dashboard.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/template/base.py", line 174, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/template/base.py", line 166, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 160, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/template/base.py", line 166, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 66, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 333, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 201, in render
+    values = list(values)
+             ^^^^^^^^^^^^
+TypeError: 'int' object is not iterable
+ERROR 2025-12-09 12:23:51,018 log "GET /api/host/dashboard/ HTTP/1.1" 500 179540
+INFO 2025-12-09 12:25:38,347 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 12:25:38,687 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 12:25:38,760 services Telerivet API credentials not configured.
+INFO 2025-12-09 12:26:24,406 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 12:26:24,754 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 12:26:24,838 services Telerivet API credentials not configured.
+INFO 2025-12-09 12:26:26,495 log "GET /api/host/dashboard/ HTTP/1.1" 200 14049
+WARNING 2025-12-09 12:26:50,833 log Not Found: /api/host/visit/40/action/
+WARNING 2025-12-09 12:26:50,834 log "POST /api/host/visit/40/action/ HTTP/1.1" 404 21698
+INFO 2025-12-09 12:26:56,528 log "GET /api/host/dashboard/ HTTP/1.1" 200 14049
+WARNING 2025-12-09 12:27:02,453 log Not Found: /api/host/visit/40/action/
+WARNING 2025-12-09 12:27:02,454 log "POST /api/host/visit/40/action/ HTTP/1.1" 404 21698
+INFO 2025-12-09 12:27:26,559 log "GET /api/host/dashboard/ HTTP/1.1" 200 14049
+INFO 2025-12-09 12:27:57,269 log "GET /api/host/dashboard/ HTTP/1.1" 200 14049
+INFO 2025-12-09 12:28:27,300 log "GET /api/host/dashboard/ HTTP/1.1" 200 14049
+INFO 2025-12-09 12:28:57,335 log "GET /api/host/dashboard/ HTTP/1.1" 200 14049
+INFO 2025-12-09 12:29:27,500 log "GET /api/host/dashboard/ HTTP/1.1" 200 14049
+INFO 2025-12-09 12:29:57,532 log "GET /api/host/dashboard/ HTTP/1.1" 200 14049
+INFO 2025-12-09 12:30:27,563 log "GET /api/host/dashboard/ HTTP/1.1" 200 14049
+INFO 2025-12-09 12:30:44,991 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 12:30:45,331 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 12:30:45,411 services Telerivet API credentials not configured.
+INFO 2025-12-09 12:30:50,607 log "GET /api/host/dashboard/ HTTP/1.1" 200 14049
+WARNING 2025-12-09 12:30:53,236 log Not Found: /api/host/visit/40/action/
+WARNING 2025-12-09 12:30:53,237 log "POST /api/host/visit/40/action/ HTTP/1.1" 404 21698
+INFO 2025-12-09 12:31:20,634 log "GET /api/host/dashboard/ HTTP/1.1" 200 14049
+INFO 2025-12-09 12:31:27,753 log "GET /api/host/dashboard/ HTTP/1.1" 200 14044
+WARNING 2025-12-09 12:31:30,108 log Not Found: /api/visit/40/action/
+WARNING 2025-12-09 12:31:30,108 log "POST /api/visit/40/action/ HTTP/1.1" 404 21683
+INFO 2025-12-09 12:31:57,784 log "GET /api/host/dashboard/ HTTP/1.1" 200 14044
+INFO 2025-12-09 12:32:29,941 log "GET /api/host/dashboard/ HTTP/1.1" 200 14044
+INFO 2025-12-09 12:32:59,973 log "GET /api/host/dashboard/ HTTP/1.1" 200 14044
+INFO 2025-12-09 12:33:30,004 log "GET /api/host/dashboard/ HTTP/1.1" 200 14044
+INFO 2025-12-09 12:34:01,657 log "GET /api/host/dashboard/ HTTP/1.1" 200 14044
+INFO 2025-12-09 12:34:24,681 log "GET /api/host/dashboard/ HTTP/1.1" 200 12552
+WARNING 2025-12-09 12:34:30,372 log Bad Request: /api/visits/40/host_action/
+WARNING 2025-12-09 12:34:30,373 log "POST /api/visits/40/host_action/ HTTP/1.1" 400 40
+WARNING 2025-12-09 12:34:34,813 log Bad Request: /api/visits/40/host_action/
+WARNING 2025-12-09 12:34:34,813 log "POST /api/visits/40/host_action/ HTTP/1.1" 400 40
+INFO 2025-12-09 12:34:54,709 log "GET /api/host/dashboard/ HTTP/1.1" 200 12552
+INFO 2025-12-09 12:35:24,740 log "GET /api/host/dashboard/ HTTP/1.1" 200 12552
+INFO 2025-12-09 12:35:54,768 log "GET /api/host/dashboard/ HTTP/1.1" 200 12552
+INFO 2025-12-09 12:36:24,797 log "GET /api/host/dashboard/ HTTP/1.1" 200 12552
+INFO 2025-12-09 12:36:54,825 log "GET /api/host/dashboard/ HTTP/1.1" 200 12552
+INFO 2025-12-09 12:37:24,853 log "GET /api/host/dashboard/ HTTP/1.1" 200 12552
+INFO 2025-12-09 12:37:43,394 log "GET /api/host/dashboard/ HTTP/1.1" 200 12552
+WARNING 2025-12-09 12:37:45,870 log Bad Request: /api/visits/40/host_action/
+WARNING 2025-12-09 12:37:45,870 log "POST /api/visits/40/host_action/ HTTP/1.1" 400 40
+INFO 2025-12-09 12:38:07,671 autoreload /home/hamy/Desktop/vms-backend/core/serializers.py changed, reloading.
+INFO 2025-12-09 12:38:08,000 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 12:38:28,349 autoreload /home/hamy/Desktop/vms-backend/core/serializers.py changed, reloading.
+INFO 2025-12-09 12:38:28,668 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 12:38:36,948 autoreload /home/hamy/Desktop/vms-backend/core/serializers.py changed, reloading.
+INFO 2025-12-09 12:38:37,252 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 12:38:37,330 services Telerivet API credentials not configured.
+INFO 2025-12-09 12:39:13,539 log "GET /api/host/dashboard/ HTTP/1.1" 200 12965
+INFO 2025-12-09 12:39:15,747 log "GET /api/host/dashboard/ HTTP/1.1" 200 12965
+INFO 2025-12-09 12:39:15,928 log "GET /api/host/dashboard/ HTTP/1.1" 200 12965
+INFO 2025-12-09 12:39:16,088 log "GET /api/host/dashboard/ HTTP/1.1" 200 12965
+INFO 2025-12-09 12:39:16,240 log "GET /api/host/dashboard/ HTTP/1.1" 200 12965
+WARNING 2025-12-09 12:39:18,341 services Telerivet not configured. SMS not sent.
+INFO 2025-12-09 12:39:18,341 services [DEBUG SMS] To: +255655225226, Message: Hello hassan kalinga, your visit to host2 has been approved. Instructions: come
+ERROR 2025-12-09 12:39:18,341 tasks Failed to send visitor approval notification for visit 40: SMS service not configured
+INFO 2025-12-09 12:39:18,353 log "POST /api/visits/40/host_action/ HTTP/1.1" 200 1342
+INFO 2025-12-09 12:39:20,235 log "GET /api/host/dashboard/ HTTP/1.1" 200 12733
+INFO 2025-12-09 12:39:27,440 log "POST /api/visits/40/host_action/ HTTP/1.1" 200 1358
+INFO 2025-12-09 12:39:29,492 log "GET /api/host/dashboard/ HTTP/1.1" 200 11250
+WARNING 2025-12-09 12:39:37,894 log Method Not Allowed (GET): /api/logout/
+WARNING 2025-12-09 12:39:37,894 log "GET /api/logout/ HTTP/1.1" 405 0
+INFO 2025-12-09 12:40:10,752 log "GET /api/host/dashboard/ HTTP/1.1" 200 11250
+INFO 2025-12-09 12:40:40,783 log "GET /api/host/dashboard/ HTTP/1.1" 200 11250
+INFO 2025-12-09 12:41:10,814 log "GET /api/host/dashboard/ HTTP/1.1" 200 11250
+INFO 2025-12-09 12:41:40,869 log "GET /api/host/dashboard/ HTTP/1.1" 200 11250
+INFO 2025-12-09 12:42:10,904 log "GET /api/host/dashboard/ HTTP/1.1" 200 11250
+INFO 2025-12-09 12:42:12,129 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 12:42:12,501 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 12:42:12,584 services Telerivet API credentials not configured.
+INFO 2025-12-09 12:42:40,953 log "GET /api/host/dashboard/ HTTP/1.1" 200 11250
+INFO 2025-12-09 12:43:10,981 log "GET /api/host/dashboard/ HTTP/1.1" 200 11250
+INFO 2025-12-09 12:43:41,011 log "GET /api/host/dashboard/ HTTP/1.1" 200 11250
+INFO 2025-12-09 12:44:11,039 log "GET /api/host/dashboard/ HTTP/1.1" 200 11250
+INFO 2025-12-09 12:44:41,074 log "GET /api/host/dashboard/ HTTP/1.1" 200 11250
+INFO 2025-12-09 12:45:11,106 log "GET /api/host/dashboard/ HTTP/1.1" 200 11250
+INFO 2025-12-09 12:45:41,138 log "GET /api/host/dashboard/ HTTP/1.1" 200 11250
+INFO 2025-12-09 12:46:11,170 log "GET /api/host/dashboard/ HTTP/1.1" 200 11250
+INFO 2025-12-09 12:46:41,200 log "GET /api/host/dashboard/ HTTP/1.1" 200 11250
+INFO 2025-12-09 12:47:11,228 log "GET /api/host/dashboard/ HTTP/1.1" 200 11250
+INFO 2025-12-09 12:47:34,391 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 12:47:34,763 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 12:47:34,845 services Telerivet API credentials not configured.
+INFO 2025-12-09 12:47:41,276 log "GET /api/host/dashboard/ HTTP/1.1" 200 11250
+INFO 2025-12-09 12:47:49,216 autoreload /home/hamy/Desktop/vms-backend/core/urls.py changed, reloading.
+INFO 2025-12-09 12:47:49,550 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 12:47:49,626 services Telerivet API credentials not configured.
+INFO 2025-12-09 12:48:11,326 log "GET /api/host/dashboard/ HTTP/1.1" 200 11498
+INFO 2025-12-09 12:48:16,624 log "GET /api/host/dashboard/ HTTP/1.1" 200 11498
+INFO 2025-12-09 12:48:16,908 log "GET /api/host/dashboard/ HTTP/1.1" 200 11498
+INFO 2025-12-09 12:48:17,086 log "GET /api/host/dashboard/ HTTP/1.1" 200 11498
+INFO 2025-12-09 12:48:17,237 log "GET /api/host/dashboard/ HTTP/1.1" 200 11498
+WARNING 2025-12-09 12:48:21,354 log Forbidden (CSRF token from POST has incorrect length.): /api/logout/
+WARNING 2025-12-09 12:48:21,355 log "POST /api/logout/ HTTP/1.1" 403 2514
+INFO 2025-12-09 12:49:28,994 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 12:49:29,346 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 12:49:29,429 services Telerivet API credentials not configured.
+WARNING 2025-12-09 12:50:18,060 log Forbidden (CSRF token from POST has incorrect length.): /api/logout/
+WARNING 2025-12-09 12:50:18,061 log "POST /api/logout/ HTTP/1.1" 403 2514
+WARNING 2025-12-09 12:50:21,259 log Forbidden (CSRF token from POST has incorrect length.): /api/logout/
+WARNING 2025-12-09 12:50:21,259 log "POST /api/logout/ HTTP/1.1" 403 2514
+INFO 2025-12-09 12:50:25,253 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 12:50:25,603 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 12:50:25,687 services Telerivet API credentials not configured.
+WARNING 2025-12-09 12:50:29,443 log Forbidden (CSRF token from POST has incorrect length.): /api/logout/
+WARNING 2025-12-09 12:50:29,443 log "POST /api/logout/ HTTP/1.1" 403 2514
+WARNING 2025-12-09 12:50:48,805 log Forbidden (CSRF token from POST has incorrect length.): /api/logout/
+WARNING 2025-12-09 12:50:48,805 log "POST /api/logout/ HTTP/1.1" 403 2514
+WARNING 2025-12-09 12:50:51,634 log Forbidden (CSRF token from POST has incorrect length.): /api/logout/
+WARNING 2025-12-09 12:50:51,634 log "POST /api/logout/ HTTP/1.1" 403 2514
+INFO 2025-12-09 12:51:16,014 log "GET /api/host/dashboard/ HTTP/1.1" 200 11624
+INFO 2025-12-09 12:51:36,787 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 12:51:37,131 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 12:51:37,213 services Telerivet API credentials not configured.
+INFO 2025-12-09 12:51:41,406 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 12:51:41,728 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 12:51:41,808 services Telerivet API credentials not configured.
+INFO 2025-12-09 12:51:46,065 log "GET /api/host/dashboard/ HTTP/1.1" 200 11624
+INFO 2025-12-09 12:52:00,485 log "GET /api/host/dashboard/ HTTP/1.1" 200 11358
+INFO 2025-12-09 12:52:00,631 log "GET /api/host/dashboard/ HTTP/1.1" 200 11358
+INFO 2025-12-09 12:52:00,790 log "GET /api/host/dashboard/ HTTP/1.1" 200 11358
+INFO 2025-12-09 12:52:01,136 log "GET /api/host/dashboard/ HTTP/1.1" 200 11358
+ERROR 2025-12-09 12:52:02,217 log Internal Server Error: /api/logout/
+Traceback (most recent call last):
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/views/decorators/http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/core/views.py", line 916, in logout_view
+    return redirect('home')
+           ^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/shortcuts.py", line 51, in redirect
+    resolve_url(to, *args, **kwargs),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/shortcuts.py", line 184, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/urls/base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 842, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'home' not found. 'home' is not a valid view function or pattern name.
+ERROR 2025-12-09 12:52:02,219 log "GET /api/logout/ HTTP/1.1" 500 124512
+INFO 2025-12-09 12:52:46,751 autoreload /home/hamy/Desktop/vms-backend/core/urls.py changed, reloading.
+INFO 2025-12-09 12:52:47,122 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 12:52:47,200 services Telerivet API credentials not configured.
+INFO 2025-12-09 12:53:49,052 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 12:53:49,379 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 12:53:49,465 services Telerivet API credentials not configured.
+INFO 2025-12-09 12:54:49,431 log "GET /api/logout/ HTTP/1.1" 302 0
+INFO 2025-12-09 12:54:49,436 log "GET /api/login/?next=/api/logout/ HTTP/1.1" 200 3835
+INFO 2025-12-09 12:54:54,739 log "GET /api/login/?next=/api/logout/ HTTP/1.1" 200 3522
+INFO 2025-12-09 12:54:55,531 log "GET /api/login/?next=/api/logout/ HTTP/1.1" 200 3522
+INFO 2025-12-09 12:55:08,613 log "POST /api/login/?next=/api/logout/ HTTP/1.1" 302 0
+INFO 2025-12-09 12:55:08,623 log "GET /api/host/dashboard/ HTTP/1.1" 200 10866
+INFO 2025-12-09 12:55:18,510 log "GET /api/logout/ HTTP/1.1" 302 0
+INFO 2025-12-09 12:55:18,513 log "GET /api/home/ HTTP/1.1" 200 7834
+INFO 2025-12-09 12:55:24,016 log "GET /api/login/ HTTP/1.1" 200 3835
+INFO 2025-12-09 12:55:30,473 log "POST /api/login/ HTTP/1.1" 302 0
+ERROR 2025-12-09 12:55:30,491 log Internal Server Error: /api/admin/dashboard/
+Traceback (most recent call last):
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/core/views.py", line 996, in admin_dashboard
+    return render(request, 'admin/dashboard.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamy/Desktop/vms-backend/venv/lib/python3.12/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: admin/dashboard.html
+ERROR 2025-12-09 12:55:30,492 log "GET /api/admin/dashboard/ HTTP/1.1" 500 106669
+INFO 2025-12-09 12:55:43,005 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 12:55:43,335 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 12:55:43,416 services Telerivet API credentials not configured.
+WARNING 2025-12-09 12:57:48,226 log Forbidden (CSRF token from POST incorrect.): /api/login/
+WARNING 2025-12-09 12:57:48,227 log "POST /api/login/ HTTP/1.1" 403 2503
+INFO 2025-12-09 13:00:28,815 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 13:00:29,158 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 13:00:29,240 services Telerivet API credentials not configured.
+INFO 2025-12-09 13:00:32,404 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 13:00:32,714 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 13:00:32,796 services Telerivet API credentials not configured.
+INFO 2025-12-09 13:00:36,971 autoreload /home/hamy/Desktop/vms-backend/core/urls.py changed, reloading.
+INFO 2025-12-09 13:00:37,311 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 13:00:37,389 services Telerivet API credentials not configured.
+INFO 2025-12-09 13:00:40,552 autoreload /home/hamy/Desktop/vms-backend/core/urls.py changed, reloading.
+INFO 2025-12-09 13:00:40,877 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 13:00:40,958 services Telerivet API credentials not configured.
+INFO 2025-12-09 13:03:51,165 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 13:03:51,482 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 13:03:51,565 services Telerivet API credentials not configured.
+INFO 2025-12-09 13:04:00,815 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 13:04:01,170 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 13:04:01,253 services Telerivet API credentials not configured.
+WARNING 2025-12-09 13:04:16,139 log Forbidden (CSRF token from POST incorrect.): /api/login/
+WARNING 2025-12-09 13:04:16,140 log "POST /api/login/ HTTP/1.1" 403 2503
+INFO 2025-12-09 13:04:28,373 log "GET /api/login/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:04:28,394 log "GET /admin/ HTTP/1.1" 200 16985
+INFO 2025-12-09 13:04:28,458 log "GET /static/admin/img/icon-yes-dark.svg HTTP/1.1" 200 558
+INFO 2025-12-09 13:04:30,461 log "POST /admin/logout/ HTTP/1.1" 200 3475
+INFO 2025-12-09 13:04:33,867 log "GET / HTTP/1.1" 200 7834
+INFO 2025-12-09 13:04:36,486 log "GET /api/login/ HTTP/1.1" 200 3522
+INFO 2025-12-09 13:04:38,794 log "POST /api/login/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:04:38,804 log "GET /admin/ HTTP/1.1" 200 16985
+INFO 2025-12-09 13:04:46,596 log "POST /admin/logout/ HTTP/1.1" 200 3475
+INFO 2025-12-09 13:04:50,280 log "GET / HTTP/1.1" 200 7834
+INFO 2025-12-09 13:05:00,539 log "GET /api/login/ HTTP/1.1" 200 3522
+INFO 2025-12-09 13:05:06,383 log "POST /api/login/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:05:06,390 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 13576
+INFO 2025-12-09 13:05:36,462 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 13279
+INFO 2025-12-09 13:05:55,618 log "GET /api/logout/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:05:55,621 log "GET /api/home/ HTTP/1.1" 200 7834
+INFO 2025-12-09 13:05:57,259 log "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:05:57,263 log "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3880
+INFO 2025-12-09 13:06:00,191 log "POST /admin/login/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:06:00,202 log "GET /admin/ HTTP/1.1" 200 17002
+INFO 2025-12-09 13:06:50,987 log "GET /admin/authtoken/tokenproxy/ HTTP/1.1" 200 13837
+INFO 2025-12-09 13:06:53,423 log "GET /admin/authtoken/tokenproxy/add/ HTTP/1.1" 200 15075
+INFO 2025-12-09 13:06:53,444 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-09 13:06:53,446 log "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2025-12-09 13:06:53,449 log "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2025-12-09 13:06:53,449 log "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2025-12-09 13:06:53,451 log "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2025-12-09 13:06:57,723 log "GET /admin/authtoken/tokenproxy/ HTTP/1.1" 200 13837
+INFO 2025-12-09 13:12:30,497 log "GET /admin/core/host/ HTTP/1.1" 200 18703
+INFO 2025-12-09 13:12:30,516 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-09 13:12:30,558 log "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 558
+INFO 2025-12-09 13:12:32,505 log "GET /admin/core/otp/ HTTP/1.1" 200 22641
+INFO 2025-12-09 13:12:32,523 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-09 13:12:37,104 log "GET /admin/core/visitor/ HTTP/1.1" 200 20768
+INFO 2025-12-09 13:12:37,118 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-09 13:12:37,122 log "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 645
+INFO 2025-12-09 13:12:40,473 log "GET /admin/core/visitor/24/change/ HTTP/1.1" 200 18653
+INFO 2025-12-09 13:12:40,489 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-09 13:12:47,140 log "GET /admin/core/visit/ HTTP/1.1" 200 23604
+INFO 2025-12-09 13:12:47,155 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-09 13:13:12,993 log "POST /admin/core/visit/ HTTP/1.1" 200 14951
+INFO 2025-12-09 13:13:13,009 log "GET /static/admin/js/cancel.js HTTP/1.1" 304 0
+INFO 2025-12-09 13:13:14,071 log "POST /admin/core/visit/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:13:14,083 log "GET /admin/core/visit/ HTTP/1.1" 200 17189
+INFO 2025-12-09 13:13:14,137 log "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-12-09 13:13:19,329 log "POST /admin/logout/ HTTP/1.1" 200 3475
+INFO 2025-12-09 13:13:23,033 log "GET / HTTP/1.1" 200 7834
+INFO 2025-12-09 13:13:25,131 log "GET /api/login/ HTTP/1.1" 200 3522
+INFO 2025-12-09 13:13:31,143 log "POST /api/login/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:13:31,151 log "GET /api/host/dashboard/ HTTP/1.1" 200 10861
+INFO 2025-12-09 13:13:38,335 log "GET /api/hosts/for_kiosk/ HTTP/1.1" 200 176
+INFO 2025-12-09 13:13:38,347 log "GET /api/visitors/names/ HTTP/1.1" 200 53
+INFO 2025-12-09 13:14:01,345 log "POST /api/visits/check_in/ HTTP/1.1" 201 103
+INFO 2025-12-09 13:14:01,366 log "GET /api/host/dashboard/ HTTP/1.1" 200 10566
+INFO 2025-12-09 13:14:01,392 views ================================================================================
+INFO 2025-12-09 13:14:01,392 views 🔄 Processing OTP request
+DEBUG 2025-12-09 13:14:01,393 views 📥 Request data: {'phone_number': '+255655225226', 'visit_id': 41, 'email': 'sultankvanny@gmail.com'}
+INFO 2025-12-09 13:14:01,394 views 📱 Processing OTP request for phone: +255655225226
+INFO 2025-12-09 13:14:01,394 views 📧 Email provided: sultankvanny@gmail.com
+INFO 2025-12-09 13:14:01,394 views 🏢 Visit ID: 41
+INFO 2025-12-09 13:14:01,396 views ✅ Found visit: 41
+INFO 2025-12-09 13:14:01,396 views 🔑 Generating OTP...
+WARNING 2025-12-09 13:14:01,403 utils Cache error in increment_otp_rate_limit: 'Settings' object has no attribute 'OTP_RATE_LIMIT_HOURS'
+INFO 2025-12-09 13:14:01,403 views ✅ OTP generated: 338895 (ID: 33)
+INFO 2025-12-09 13:14:01,403 views 🚀 Queueing OTP sending task...
+INFO 2025-12-09 13:14:01,481 tasks ================================================================================
+INFO 2025-12-09 13:14:01,481 tasks 🚀 Starting OTP sending task
+INFO 2025-12-09 13:14:01,481 tasks 📱 Phone: +255655225226
+INFO 2025-12-09 13:14:01,481 tasks 📧 Email: sultankvanny@gmail.com
+INFO 2025-12-09 13:14:01,481 tasks 🔑 OTP Code: 338895
+WARNING 2025-12-09 13:14:01,481 tasks ⚠️ Telerivet API not configured. SMS will not be sent.
+INFO 2025-12-09 13:14:01,481 tasks 📧 Attempting to send OTP email to sultankvanny@gmail.com
+INFO 2025-12-09 13:14:01,481 utils 📧 Preparing to send OTP email to: sultankvanny@gmail.com
+DEBUG 2025-12-09 13:14:01,481 utils 📤 Sending email - From: VMS <sulboymnyama@gmail.com>, To: ['sultankvanny@gmail.com']
+DEBUG 2025-12-09 13:14:01,481 utils 📧 Subject: Your VMS System Verification Code
+INFO 2025-12-09 13:14:03,754 utils ✅ Successfully sent OTP email to sultankvanny@gmail.com
+INFO 2025-12-09 13:14:03,754 tasks ✅ Email sent successfully to sultankvanny@gmail.com
+INFO 2025-12-09 13:14:03,755 tasks 📊 Task completed with results:
+INFO 2025-12-09 13:14:03,755 tasks 📱 SMS Status: ❌ Failed - SMS service not configured
+INFO 2025-12-09 13:14:03,755 tasks 📧 Email Status: ✅ Success - OTP sent successfully
+INFO 2025-12-09 13:14:03,755 tasks ================================================================================
+INFO 2025-12-09 13:14:03,759 views 📨 Task completed: {'sms': {'sent': False, 'message': 'SMS service not configured', 'to': '+255655225226'}, 'email': {'sent': True, 'message': 'OTP sent successfully', 'to': 'sultankvanny@gmail.com'}}
+INFO 2025-12-09 13:14:03,763 views 📝 Audit log created successfully
+INFO 2025-12-09 13:14:03,763 views ✅ OTP request processed successfully. Response: {'message': 'Warning: Failed to send SMS. Please try again. Check your email for the code.', 'phone_number': '+255655225226', 'sms_sent': False, 'email_sent': True, 'expires_in_minutes': 5}
+INFO 2025-12-09 13:14:03,764 views ================================================================================
+INFO 2025-12-09 13:14:03,764 log "POST /api/visits/request_otp/ HTTP/1.1" 200 180
+INFO 2025-12-09 13:14:24,583 views ================================================================================
+INFO 2025-12-09 13:14:24,583 views 🔍 Processing OTP verification
+DEBUG 2025-12-09 13:14:24,583 views 📥 Request data: {'phone_number': '+255655225226', 'code': '338895', 'visit_id': 41, 'email': 'sultankvanny@gmail.com'}
+INFO 2025-12-09 13:14:24,583 views 🔑 Verifying OTP for phone: +255655225226
+INFO 2025-12-09 13:14:24,583 views 🏢 Visit ID: 41
+INFO 2025-12-09 13:14:24,585 views ✅ Found visit: 41 | Current status: pending_otp
+INFO 2025-12-09 13:14:24,585 views 🔐 Verifying OTP...
+INFO 2025-12-09 13:14:24,590 views ✅ OTP verification successful!
+INFO 2025-12-09 13:14:24,590 views 📝 Starting visit update transaction...
+INFO 2025-12-09 13:14:24,590 views 📝 Refreshed visit status: pending_otp
+INFO 2025-12-09 13:14:24,590 views 🎫 Attempting to assign card...
+INFO 2025-12-09 13:14:24,592 views ✅ Assigned card 16 to visit 41
+INFO 2025-12-09 13:14:24,592 views ✅ Updated visit 41 status from 'pending_host_approval' to 'pending_host_approval'
+INFO 2025-12-09 13:14:24,593 views ✅ Confirmed new status: pending_host_approval
+INFO 2025-12-09 13:14:24,593 views 📧 Sending welcome email to sultankvanny@gmail.com...
+INFO 2025-12-09 13:14:27,560 utils ✅ Welcome email sent to sultankvanny@gmail.com for visit 41
+INFO 2025-12-09 13:14:27,561 views ✅ Sent welcome email to sultankvanny@gmail.com
+INFO 2025-12-09 13:14:27,575 views 📊 Final visit status: pending_host_approval
+INFO 2025-12-09 13:14:27,598 views 📝 Audit log created successfully
+INFO 2025-12-09 13:14:27,598 views ✅ OTP verification completed successfully
+INFO 2025-12-09 13:14:27,598 views ================================================================================
+INFO 2025-12-09 13:14:27,599 log "POST /api/visits/verify_otp/ HTTP/1.1" 200 1424
+INFO 2025-12-09 13:14:31,399 log "GET /api/host/dashboard/ HTTP/1.1" 200 13074
+INFO 2025-12-09 13:14:45,105 log "GET /api/logout/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:14:45,109 log "GET /api/home/ HTTP/1.1" 200 7834
+INFO 2025-12-09 13:14:46,315 log "GET /api/login/ HTTP/1.1" 200 3835
+INFO 2025-12-09 13:14:48,937 log "POST /api/login/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:14:48,943 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 13576
+INFO 2025-12-09 13:14:55,507 log "GET /api/logout/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:14:55,510 log "GET /api/home/ HTTP/1.1" 200 7834
+INFO 2025-12-09 13:14:57,951 log "GET /api/login/ HTTP/1.1" 200 3835
+INFO 2025-12-09 13:15:00,325 log "POST /api/login/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:15:00,332 log "GET /api/host/dashboard/ HTTP/1.1" 200 13369
+WARNING 2025-12-09 13:15:03,254 services Telerivet not configured. SMS not sent.
+INFO 2025-12-09 13:15:03,254 services [DEBUG SMS] To: +255655225226, Message: Hello mohamad kamardin, your visit to host2 has been approved.
+ERROR 2025-12-09 13:15:03,254 tasks Failed to send visitor approval notification for visit 41: SMS service not configured
+INFO 2025-12-09 13:15:03,265 log "POST /api/visits/41/host_action/ HTTP/1.1" 200 1340
+INFO 2025-12-09 13:15:04,211 log "GET /api/host/dashboard/ HTTP/1.1" 200 12841
+INFO 2025-12-09 13:15:35,277 log "GET /api/host/dashboard/ HTTP/1.1" 200 12841
+INFO 2025-12-09 13:16:05,933 log "GET /api/host/dashboard/ HTTP/1.1" 200 12842
+INFO 2025-12-09 13:16:37,278 log "GET /api/host/dashboard/ HTTP/1.1" 200 12842
+INFO 2025-12-09 13:17:07,381 log "GET /api/host/dashboard/ HTTP/1.1" 200 12842
+INFO 2025-12-09 13:17:37,412 log "GET /api/host/dashboard/ HTTP/1.1" 200 12842
+INFO 2025-12-09 13:18:07,442 log "GET /api/host/dashboard/ HTTP/1.1" 200 12842
+INFO 2025-12-09 13:18:37,471 log "GET /api/host/dashboard/ HTTP/1.1" 200 12842
+INFO 2025-12-09 13:19:07,499 log "GET /api/host/dashboard/ HTTP/1.1" 200 12842
+INFO 2025-12-09 13:19:37,527 log "GET /api/host/dashboard/ HTTP/1.1" 200 12842
+INFO 2025-12-09 13:20:09,692 log "GET /api/host/dashboard/ HTTP/1.1" 200 12842
+INFO 2025-12-09 13:20:39,722 log "GET /api/host/dashboard/ HTTP/1.1" 200 12842
+INFO 2025-12-09 13:21:09,751 log "GET /api/host/dashboard/ HTTP/1.1" 200 12842
+INFO 2025-12-09 13:21:40,326 log "GET /api/host/dashboard/ HTTP/1.1" 200 12842
+INFO 2025-12-09 13:21:44,860 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 13:21:45,245 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 13:21:45,328 services Telerivet API credentials not configured.
+INFO 2025-12-09 13:21:54,573 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 13:21:54,920 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 13:21:55,003 services Telerivet API credentials not configured.
+INFO 2025-12-09 13:22:12,436 log "GET /api/host/dashboard/ HTTP/1.1" 200 12842
+INFO 2025-12-09 13:22:42,467 log "GET /api/host/dashboard/ HTTP/1.1" 200 12842
+INFO 2025-12-09 13:22:57,954 log "GET /api/host/dashboard/ HTTP/1.1" 200 12842
+INFO 2025-12-09 13:22:58,177 log "GET /api/host/dashboard/ HTTP/1.1" 200 12842
+INFO 2025-12-09 13:23:01,254 log "POST /api/visits/41/host_action/ HTTP/1.1" 200 1356
+INFO 2025-12-09 13:23:02,644 log "GET /api/host/dashboard/ HTTP/1.1" 200 11360
+INFO 2025-12-09 13:23:05,781 log "GET /api/logout/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:23:05,783 log "GET /api/home/ HTTP/1.1" 200 7834
+INFO 2025-12-09 13:23:07,181 log "GET /api/login/ HTTP/1.1" 200 3835
+INFO 2025-12-09 13:23:09,824 log "POST /api/login/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:23:09,837 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 18372
+INFO 2025-12-09 13:23:40,062 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 18075
+WARNING 2025-12-09 13:23:47,572 log Unauthorized: /api/visits/41/secretary_action/
+WARNING 2025-12-09 13:23:47,573 log "POST /api/visits/41/secretary_action/ HTTP/1.1" 401 59
+WARNING 2025-12-09 13:23:50,241 log Unauthorized: /api/visits/41/secretary_action/
+WARNING 2025-12-09 13:23:50,241 log "POST /api/visits/41/secretary_action/ HTTP/1.1" 401 59
+WARNING 2025-12-09 13:23:51,548 log Unauthorized: /api/visits/41/secretary_action/
+WARNING 2025-12-09 13:23:51,548 log "POST /api/visits/41/secretary_action/ HTTP/1.1" 401 59
+INFO 2025-12-09 13:24:10,126 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 18075
+INFO 2025-12-09 13:24:42,543 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 18075
+INFO 2025-12-09 13:25:12,578 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 18075
+INFO 2025-12-09 13:25:42,610 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 18075
+INFO 2025-12-09 13:26:13,024 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 18075
+INFO 2025-12-09 13:26:43,058 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 18075
+INFO 2025-12-09 13:27:13,092 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 18075
+INFO 2025-12-09 13:27:43,281 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 18394
+INFO 2025-12-09 13:28:00,878 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 18394
+INFO 2025-12-09 13:28:03,619 log "POST /api/visits/41/secretary_action/ HTTP/1.1" 200 1428
+INFO 2025-12-09 13:28:30,914 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 16213
+INFO 2025-12-09 13:29:02,754 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 16345
+INFO 2025-12-09 13:29:09,816 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 16345
+INFO 2025-12-09 13:29:40,399 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 16345
+INFO 2025-12-09 13:29:40,680 log "GET /api/hosts/for_kiosk/ HTTP/1.1" 200 176
+INFO 2025-12-09 13:29:40,691 log "GET /api/visitors/names/ HTTP/1.1" 200 72
+INFO 2025-12-09 13:30:05,483 log "POST /api/visits/check_in/ HTTP/1.1" 201 103
+INFO 2025-12-09 13:30:05,511 views ================================================================================
+INFO 2025-12-09 13:30:05,511 views 🔄 Processing OTP request
+DEBUG 2025-12-09 13:30:05,511 views 📥 Request data: {'phone_number': '+255655444777', 'visit_id': 42, 'email': 'sultankvanny@gmail.com'}
+INFO 2025-12-09 13:30:05,511 views 📱 Processing OTP request for phone: +255655444777
+INFO 2025-12-09 13:30:05,511 views 📧 Email provided: sultankvanny@gmail.com
+INFO 2025-12-09 13:30:05,512 views 🏢 Visit ID: 42
+INFO 2025-12-09 13:30:05,513 views ✅ Found visit: 42
+INFO 2025-12-09 13:30:05,513 views 🔑 Generating OTP...
+WARNING 2025-12-09 13:30:05,520 utils Cache error in increment_otp_rate_limit: 'Settings' object has no attribute 'OTP_RATE_LIMIT_HOURS'
+INFO 2025-12-09 13:30:05,521 views ✅ OTP generated: 483014 (ID: 34)
+INFO 2025-12-09 13:30:05,521 views 🚀 Queueing OTP sending task...
+INFO 2025-12-09 13:30:05,564 tasks ================================================================================
+INFO 2025-12-09 13:30:05,564 tasks 🚀 Starting OTP sending task
+INFO 2025-12-09 13:30:05,564 tasks 📱 Phone: +255655444777
+INFO 2025-12-09 13:30:05,564 tasks 📧 Email: sultankvanny@gmail.com
+INFO 2025-12-09 13:30:05,564 tasks 🔑 OTP Code: 483014
+WARNING 2025-12-09 13:30:05,564 tasks ⚠️ Telerivet API not configured. SMS will not be sent.
+INFO 2025-12-09 13:30:05,564 tasks 📧 Attempting to send OTP email to sultankvanny@gmail.com
+INFO 2025-12-09 13:30:05,564 utils 📧 Preparing to send OTP email to: sultankvanny@gmail.com
+DEBUG 2025-12-09 13:30:05,565 utils 📤 Sending email - From: VMS <sulboymnyama@gmail.com>, To: ['sultankvanny@gmail.com']
+DEBUG 2025-12-09 13:30:05,565 utils 📧 Subject: Your VMS System Verification Code
+INFO 2025-12-09 13:30:08,896 utils ✅ Successfully sent OTP email to sultankvanny@gmail.com
+INFO 2025-12-09 13:30:08,897 tasks ✅ Email sent successfully to sultankvanny@gmail.com
+INFO 2025-12-09 13:30:08,898 tasks 📊 Task completed with results:
+INFO 2025-12-09 13:30:08,898 tasks 📱 SMS Status: ❌ Failed - SMS service not configured
+INFO 2025-12-09 13:30:08,898 tasks 📧 Email Status: ✅ Success - OTP sent successfully
+INFO 2025-12-09 13:30:08,898 tasks ================================================================================
+INFO 2025-12-09 13:30:08,901 views 📨 Task completed: {'sms': {'sent': False, 'message': 'SMS service not configured', 'to': '+255655444777'}, 'email': {'sent': True, 'message': 'OTP sent successfully', 'to': 'sultankvanny@gmail.com'}}
+INFO 2025-12-09 13:30:08,906 views 📝 Audit log created successfully
+INFO 2025-12-09 13:30:08,906 views ✅ OTP request processed successfully. Response: {'message': 'Warning: Failed to send SMS. Please try again. Check your email for the code.', 'phone_number': '+255655444777', 'sms_sent': False, 'email_sent': True, 'expires_in_minutes': 5}
+INFO 2025-12-09 13:30:08,907 views ================================================================================
+INFO 2025-12-09 13:30:08,907 log "POST /api/visits/request_otp/ HTTP/1.1" 200 180
+INFO 2025-12-09 13:30:11,842 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 17349
+INFO 2025-12-09 13:30:23,673 views ================================================================================
+INFO 2025-12-09 13:30:23,673 views 🔍 Processing OTP verification
+DEBUG 2025-12-09 13:30:23,673 views 📥 Request data: {'phone_number': '+255655444777', 'code': '403014', 'visit_id': 42, 'email': 'sultankvanny@gmail.com'}
+INFO 2025-12-09 13:30:23,673 views 🔑 Verifying OTP for phone: +255655444777
+INFO 2025-12-09 13:30:23,673 views 🏢 Visit ID: 42
+INFO 2025-12-09 13:30:23,675 views ✅ Found visit: 42 | Current status: pending_otp
+INFO 2025-12-09 13:30:23,675 views 🔐 Verifying OTP...
+ERROR 2025-12-09 13:30:23,679 views ❌ OTP verification failed: Invalid OTP code
+WARNING 2025-12-09 13:30:23,680 log Bad Request: /api/visits/verify_otp/
+WARNING 2025-12-09 13:30:23,680 log "POST /api/visits/verify_otp/ HTTP/1.1" 400 28
+INFO 2025-12-09 13:30:29,517 views ================================================================================
+INFO 2025-12-09 13:30:29,517 views 🔍 Processing OTP verification
+DEBUG 2025-12-09 13:30:29,517 views 📥 Request data: {'phone_number': '+255655444777', 'code': '483014', 'visit_id': 42, 'email': 'sultankvanny@gmail.com'}
+INFO 2025-12-09 13:30:29,517 views 🔑 Verifying OTP for phone: +255655444777
+INFO 2025-12-09 13:30:29,517 views 🏢 Visit ID: 42
+INFO 2025-12-09 13:30:29,519 views ✅ Found visit: 42 | Current status: pending_otp
+INFO 2025-12-09 13:30:29,519 views 🔐 Verifying OTP...
+INFO 2025-12-09 13:30:29,526 views ✅ OTP verification successful!
+INFO 2025-12-09 13:30:29,527 views 📝 Starting visit update transaction...
+INFO 2025-12-09 13:30:29,527 views 📝 Refreshed visit status: pending_otp
+INFO 2025-12-09 13:30:29,527 views 🎫 Attempting to assign card...
+INFO 2025-12-09 13:30:29,529 views ✅ Assigned card 16 to visit 42
+INFO 2025-12-09 13:30:29,530 views ✅ Updated visit 42 status from 'pending_host_approval' to 'pending_host_approval'
+INFO 2025-12-09 13:30:29,530 views ✅ Confirmed new status: pending_host_approval
+INFO 2025-12-09 13:30:29,531 views 📧 Sending welcome email to sultankvanny@gmail.com...
+INFO 2025-12-09 13:30:32,690 utils ✅ Welcome email sent to sultankvanny@gmail.com for visit 42
+INFO 2025-12-09 13:30:32,691 views ✅ Sent welcome email to sultankvanny@gmail.com
+INFO 2025-12-09 13:30:32,696 views 📊 Final visit status: pending_host_approval
+INFO 2025-12-09 13:30:32,705 views 📝 Audit log created successfully
+INFO 2025-12-09 13:30:32,706 views ✅ OTP verification completed successfully
+INFO 2025-12-09 13:30:32,706 views ================================================================================
+INFO 2025-12-09 13:30:32,706 log "POST /api/visits/verify_otp/ HTTP/1.1" 200 1422
+INFO 2025-12-09 13:30:41,895 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 17350
+INFO 2025-12-09 13:30:54,928 log "GET /api/logout/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:30:54,931 log "GET /api/home/ HTTP/1.1" 200 7834
+INFO 2025-12-09 13:30:56,655 log "GET /api/login/ HTTP/1.1" 200 3835
+INFO 2025-12-09 13:30:58,922 log "POST /api/login/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:30:58,930 log "GET /api/host/dashboard/ HTTP/1.1" 200 13367
+WARNING 2025-12-09 13:31:03,763 services Telerivet not configured. SMS not sent.
+INFO 2025-12-09 13:31:03,763 services [DEBUG SMS] To: +255655444777, Message: Hello hassan kalinga, your visit to host2 has been approved.
+ERROR 2025-12-09 13:31:03,763 tasks Failed to send visitor approval notification for visit 42: SMS service not configured
+INFO 2025-12-09 13:31:03,775 log "POST /api/visits/42/host_action/ HTTP/1.1" 200 1338
+INFO 2025-12-09 13:31:05,121 log "GET /api/host/dashboard/ HTTP/1.1" 200 12840
+INFO 2025-12-09 13:31:08,105 log "GET /api/logout/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:31:08,109 log "GET /api/home/ HTTP/1.1" 200 7834
+INFO 2025-12-09 13:31:09,457 log "GET /api/login/ HTTP/1.1" 200 3835
+INFO 2025-12-09 13:31:11,788 log "POST /api/login/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:31:11,800 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 17648
+INFO 2025-12-09 13:31:20,259 log "GET /api/logout/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:31:20,262 log "GET /api/home/ HTTP/1.1" 200 7834
+INFO 2025-12-09 13:31:21,773 log "GET /api/login/ HTTP/1.1" 200 3835
+INFO 2025-12-09 13:31:24,932 log "POST /api/login/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:31:24,943 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 17648
+INFO 2025-12-09 13:31:28,564 log "GET /api/logout/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:31:28,567 log "GET /api/home/ HTTP/1.1" 200 7834
+INFO 2025-12-09 13:31:29,635 log "GET /api/login/ HTTP/1.1" 200 3835
+INFO 2025-12-09 13:31:31,948 log "POST /api/login/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:31:31,955 log "GET /api/host/dashboard/ HTTP/1.1" 200 13134
+INFO 2025-12-09 13:31:35,636 log "POST /api/visits/42/host_action/ HTTP/1.1" 200 1354
+INFO 2025-12-09 13:31:37,694 log "GET /api/host/dashboard/ HTTP/1.1" 200 11358
+INFO 2025-12-09 13:31:51,031 log "GET /api/logout/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:31:51,035 log "GET /api/home/ HTTP/1.1" 200 7834
+INFO 2025-12-09 13:31:52,336 log "GET /api/login/ HTTP/1.1" 200 3835
+INFO 2025-12-09 13:31:55,138 log "POST /api/login/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:31:55,151 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19690
+INFO 2025-12-09 13:32:04,763 log "POST /api/visits/42/secretary_action/ HTTP/1.1" 200 1426
+WARNING 2025-12-09 13:32:10,466 log Bad Request: /api/visits/42/secretary_action/
+WARNING 2025-12-09 13:32:10,466 log "POST /api/visits/42/secretary_action/ HTTP/1.1" 400 66
+INFO 2025-12-09 13:32:14,512 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 17344
+INFO 2025-12-09 13:32:44,544 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 17344
+INFO 2025-12-09 13:32:48,442 log "GET /api/logout/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:32:48,445 log "GET /api/home/ HTTP/1.1" 200 7834
+INFO 2025-12-09 13:32:50,604 log "GET /api/login/ HTTP/1.1" 200 3835
+INFO 2025-12-09 13:32:59,767 log "POST /api/login/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:32:59,775 log "GET /api/host/dashboard/ HTTP/1.1" 200 10861
+INFO 2025-12-09 13:33:29,851 log "GET /api/host/dashboard/ HTTP/1.1" 200 10566
+INFO 2025-12-09 13:33:33,272 log "GET /api/logout/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:33:33,276 log "GET /api/home/ HTTP/1.1" 200 7834
+INFO 2025-12-09 13:33:35,235 log "GET /api/login/ HTTP/1.1" 200 3835
+INFO 2025-12-09 13:33:40,111 log "POST /api/login/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:33:40,121 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 17641
+INFO 2025-12-09 13:34:10,197 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 17344
+INFO 2025-12-09 13:34:40,229 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 17344
+INFO 2025-12-09 13:35:10,262 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 17344
+INFO 2025-12-09 13:35:40,293 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 17344
+INFO 2025-12-09 13:36:11,589 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 17344
+INFO 2025-12-09 13:36:41,621 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 17344
+INFO 2025-12-09 13:37:11,653 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 17344
+INFO 2025-12-09 13:37:41,685 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 17344
+INFO 2025-12-09 13:38:11,718 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 17344
+INFO 2025-12-09 13:38:41,752 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 17344
+INFO 2025-12-09 13:39:11,785 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 17344
+INFO 2025-12-09 13:39:41,819 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 17344
+INFO 2025-12-09 13:40:11,851 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 17344
+INFO 2025-12-09 13:40:41,887 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 17344
+INFO 2025-12-09 13:41:11,919 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 17344
+INFO 2025-12-09 13:41:41,954 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 17344
+INFO 2025-12-09 13:42:11,989 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 17344
+INFO 2025-12-09 13:42:42,024 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 17344
+INFO 2025-12-09 13:43:15,094 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 17754
+INFO 2025-12-09 13:43:46,241 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 17754
+INFO 2025-12-09 13:44:16,272 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 17754
+INFO 2025-12-09 13:44:48,662 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 17754
+INFO 2025-12-09 13:45:18,695 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 17754
+INFO 2025-12-09 13:45:38,214 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 13:45:38,582 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 13:45:38,668 services Telerivet API credentials not configured.
+INFO 2025-12-09 13:45:39,834 autoreload /home/hamy/Desktop/vms-backend/core/views.py changed, reloading.
+INFO 2025-12-09 13:45:40,196 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-09 13:45:40,282 services Telerivet API credentials not configured.
+INFO 2025-12-09 13:45:41,157 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 17754
+INFO 2025-12-09 13:45:41,456 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 17754
+INFO 2025-12-09 13:45:41,606 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 17754
+INFO 2025-12-09 13:45:41,775 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 17754
+INFO 2025-12-09 13:45:41,935 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 17754
+INFO 2025-12-09 13:45:42,111 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 17754
+INFO 2025-12-09 13:45:42,270 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 17754
+INFO 2025-12-09 13:45:42,422 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 17754
+INFO 2025-12-09 13:45:42,582 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 17754
+INFO 2025-12-09 13:45:42,728 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 17754
+INFO 2025-12-09 13:45:48,057 log "GET /api/logout/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:45:48,060 log "GET /api/home/ HTTP/1.1" 200 7834
+INFO 2025-12-09 13:45:49,535 log "GET /api/login/ HTTP/1.1" 200 3835
+INFO 2025-12-09 13:45:52,357 log "POST /api/login/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:45:52,365 log "GET /api/host/dashboard/ HTTP/1.1" 200 12649
+INFO 2025-12-09 13:46:21,827 log "GET /api/hosts/for_kiosk/ HTTP/1.1" 200 176
+INFO 2025-12-09 13:46:21,839 log "GET /api/visitors/names/ HTTP/1.1" 200 72
+INFO 2025-12-09 13:46:23,135 log "GET /api/host/dashboard/ HTTP/1.1" 200 12354
+INFO 2025-12-09 13:46:49,725 log "POST /api/visits/check_in/ HTTP/1.1" 201 103
+INFO 2025-12-09 13:46:49,749 views ================================================================================
+INFO 2025-12-09 13:46:49,749 views 🔄 Processing OTP request
+DEBUG 2025-12-09 13:46:49,749 views 📥 Request data: {'phone_number': '+255718650285', 'visit_id': 43, 'email': 'sultankvanny@gmail.com'}
+INFO 2025-12-09 13:46:49,750 views 📱 Processing OTP request for phone: +255718650285
+INFO 2025-12-09 13:46:49,750 views 📧 Email provided: sultankvanny@gmail.com
+INFO 2025-12-09 13:46:49,750 views 🏢 Visit ID: 43
+INFO 2025-12-09 13:46:49,751 views ✅ Found visit: 43
+INFO 2025-12-09 13:46:49,751 views 🔑 Generating OTP...
+WARNING 2025-12-09 13:46:49,757 utils Cache error in increment_otp_rate_limit: 'Settings' object has no attribute 'OTP_RATE_LIMIT_HOURS'
+INFO 2025-12-09 13:46:49,757 views ✅ OTP generated: 823027 (ID: 35)
+INFO 2025-12-09 13:46:49,757 views 🚀 Queueing OTP sending task...
+INFO 2025-12-09 13:46:49,802 tasks ================================================================================
+INFO 2025-12-09 13:46:49,802 tasks 🚀 Starting OTP sending task
+INFO 2025-12-09 13:46:49,802 tasks 📱 Phone: +255718650285
+INFO 2025-12-09 13:46:49,802 tasks 📧 Email: sultankvanny@gmail.com
+INFO 2025-12-09 13:46:49,802 tasks 🔑 OTP Code: 823027
+WARNING 2025-12-09 13:46:49,802 tasks ⚠️ Telerivet API not configured. SMS will not be sent.
+INFO 2025-12-09 13:46:49,802 tasks 📧 Attempting to send OTP email to sultankvanny@gmail.com
+INFO 2025-12-09 13:46:49,802 utils 📧 Preparing to send OTP email to: sultankvanny@gmail.com
+DEBUG 2025-12-09 13:46:49,803 utils 📤 Sending email - From: VMS <sulboymnyama@gmail.com>, To: ['sultankvanny@gmail.com']
+DEBUG 2025-12-09 13:46:49,803 utils 📧 Subject: Your VMS System Verification Code
+INFO 2025-12-09 13:46:53,146 utils ✅ Successfully sent OTP email to sultankvanny@gmail.com
+INFO 2025-12-09 13:46:53,147 tasks ✅ Email sent successfully to sultankvanny@gmail.com
+INFO 2025-12-09 13:46:53,147 tasks 📊 Task completed with results:
+INFO 2025-12-09 13:46:53,147 tasks 📱 SMS Status: ❌ Failed - SMS service not configured
+INFO 2025-12-09 13:46:53,147 tasks 📧 Email Status: ✅ Success - OTP sent successfully
+INFO 2025-12-09 13:46:53,147 tasks ================================================================================
+INFO 2025-12-09 13:46:53,150 views 📨 Task completed: {'sms': {'sent': False, 'message': 'SMS service not configured', 'to': '+255718650285'}, 'email': {'sent': True, 'message': 'OTP sent successfully', 'to': 'sultankvanny@gmail.com'}}
+INFO 2025-12-09 13:46:53,155 views 📝 Audit log created successfully
+INFO 2025-12-09 13:46:53,156 views ✅ OTP request processed successfully. Response: {'message': 'Warning: Failed to send SMS. Please try again. Check your email for the code.', 'phone_number': '+255718650285', 'sms_sent': False, 'email_sent': True, 'expires_in_minutes': 5}
+INFO 2025-12-09 13:46:53,156 views ================================================================================
+INFO 2025-12-09 13:46:53,156 log "POST /api/visits/request_otp/ HTTP/1.1" 200 180
+INFO 2025-12-09 13:46:53,795 log "GET /api/host/dashboard/ HTTP/1.1" 200 12354
+INFO 2025-12-09 13:47:08,077 views ================================================================================
+INFO 2025-12-09 13:47:08,077 views 🔍 Processing OTP verification
+DEBUG 2025-12-09 13:47:08,077 views 📥 Request data: {'phone_number': '+255718650285', 'code': '823027', 'visit_id': 43, 'email': 'sultankvanny@gmail.com'}
+INFO 2025-12-09 13:47:08,077 views 🔑 Verifying OTP for phone: +255718650285
+INFO 2025-12-09 13:47:08,077 views 🏢 Visit ID: 43
+INFO 2025-12-09 13:47:08,079 views ✅ Found visit: 43 | Current status: pending_otp
+INFO 2025-12-09 13:47:08,079 views 🔐 Verifying OTP...
+INFO 2025-12-09 13:47:08,085 views ✅ OTP verification successful!
+INFO 2025-12-09 13:47:08,085 views 📝 Starting visit update transaction...
+INFO 2025-12-09 13:47:08,086 views 📝 Refreshed visit status: pending_otp
+INFO 2025-12-09 13:47:08,086 views 🎫 Attempting to assign card...
+INFO 2025-12-09 13:47:08,087 views ✅ Assigned card 16 to visit 43
+INFO 2025-12-09 13:47:08,088 views ✅ Updated visit 43 status from 'pending_host_approval' to 'pending_host_approval'
+INFO 2025-12-09 13:47:08,088 views ✅ Confirmed new status: pending_host_approval
+INFO 2025-12-09 13:47:08,089 views 📧 Sending welcome email to sultankvanny@gmail.com...
+INFO 2025-12-09 13:47:11,171 utils ✅ Welcome email sent to sultankvanny@gmail.com for visit 43
+INFO 2025-12-09 13:47:11,172 views ✅ Sent welcome email to sultankvanny@gmail.com
+INFO 2025-12-09 13:47:11,177 views 📊 Final visit status: pending_host_approval
+INFO 2025-12-09 13:47:11,187 views 📝 Audit log created successfully
+INFO 2025-12-09 13:47:11,187 views ✅ OTP verification completed successfully
+INFO 2025-12-09 13:47:11,187 views ================================================================================
+INFO 2025-12-09 13:47:11,187 log "POST /api/visits/verify_otp/ HTTP/1.1" 200 1422
+INFO 2025-12-09 13:47:25,541 log "GET /api/hosts/for_kiosk/ HTTP/1.1" 200 176
+INFO 2025-12-09 13:47:25,562 log "GET /api/visitors/names/ HTTP/1.1" 200 72
+INFO 2025-12-09 13:47:26,989 log "GET /api/host/dashboard/ HTTP/1.1" 200 14860
+INFO 2025-12-09 13:47:51,780 log "POST /api/visits/check_in/ HTTP/1.1" 201 103
+INFO 2025-12-09 13:47:51,815 views ================================================================================
+INFO 2025-12-09 13:47:51,815 views 🔄 Processing OTP request
+DEBUG 2025-12-09 13:47:51,815 views 📥 Request data: {'phone_number': '+255655777888', 'visit_id': 44, 'email': 'coderxsultan@gmail.com'}
+INFO 2025-12-09 13:47:51,815 views 📱 Processing OTP request for phone: +255655777888
+INFO 2025-12-09 13:47:51,815 views 📧 Email provided: coderxsultan@gmail.com
+INFO 2025-12-09 13:47:51,816 views 🏢 Visit ID: 44
+INFO 2025-12-09 13:47:51,817 views ✅ Found visit: 44
+INFO 2025-12-09 13:47:51,817 views 🔑 Generating OTP...
+WARNING 2025-12-09 13:47:51,823 utils Cache error in increment_otp_rate_limit: 'Settings' object has no attribute 'OTP_RATE_LIMIT_HOURS'
+INFO 2025-12-09 13:47:51,823 views ✅ OTP generated: 448833 (ID: 36)
+INFO 2025-12-09 13:47:51,823 views 🚀 Queueing OTP sending task...
+INFO 2025-12-09 13:47:51,824 tasks ================================================================================
+INFO 2025-12-09 13:47:51,824 tasks 🚀 Starting OTP sending task
+INFO 2025-12-09 13:47:51,824 tasks 📱 Phone: +255655777888
+INFO 2025-12-09 13:47:51,824 tasks 📧 Email: coderxsultan@gmail.com
+INFO 2025-12-09 13:47:51,824 tasks 🔑 OTP Code: 448833
+WARNING 2025-12-09 13:47:51,824 tasks ⚠️ Telerivet API not configured. SMS will not be sent.
+INFO 2025-12-09 13:47:51,824 tasks 📧 Attempting to send OTP email to coderxsultan@gmail.com
+INFO 2025-12-09 13:47:51,824 utils 📧 Preparing to send OTP email to: coderxsultan@gmail.com
+DEBUG 2025-12-09 13:47:51,824 utils 📤 Sending email - From: VMS <sulboymnyama@gmail.com>, To: ['coderxsultan@gmail.com']
+DEBUG 2025-12-09 13:47:51,824 utils 📧 Subject: Your VMS System Verification Code
+INFO 2025-12-09 13:47:57,021 log "GET /api/host/dashboard/ HTTP/1.1" 200 14859
+INFO 2025-12-09 13:48:00,784 utils ✅ Successfully sent OTP email to coderxsultan@gmail.com
+INFO 2025-12-09 13:48:00,785 tasks ✅ Email sent successfully to coderxsultan@gmail.com
+INFO 2025-12-09 13:48:00,785 tasks 📊 Task completed with results:
+INFO 2025-12-09 13:48:00,785 tasks 📱 SMS Status: ❌ Failed - SMS service not configured
+INFO 2025-12-09 13:48:00,785 tasks 📧 Email Status: ✅ Success - OTP sent successfully
+INFO 2025-12-09 13:48:00,785 tasks ================================================================================
+INFO 2025-12-09 13:48:00,788 views 📨 Task completed: {'sms': {'sent': False, 'message': 'SMS service not configured', 'to': '+255655777888'}, 'email': {'sent': True, 'message': 'OTP sent successfully', 'to': 'coderxsultan@gmail.com'}}
+INFO 2025-12-09 13:48:00,793 views 📝 Audit log created successfully
+INFO 2025-12-09 13:48:00,793 views ✅ OTP request processed successfully. Response: {'message': 'Warning: Failed to send SMS. Please try again. Check your email for the code.', 'phone_number': '+255655777888', 'sms_sent': False, 'email_sent': True, 'expires_in_minutes': 5}
+INFO 2025-12-09 13:48:00,793 views ================================================================================
+INFO 2025-12-09 13:48:00,793 log "POST /api/visits/request_otp/ HTTP/1.1" 200 180
+INFO 2025-12-09 13:48:27,050 log "GET /api/host/dashboard/ HTTP/1.1" 200 14859
+INFO 2025-12-09 13:48:47,239 views ================================================================================
+INFO 2025-12-09 13:48:47,239 views 🔍 Processing OTP verification
+DEBUG 2025-12-09 13:48:47,239 views 📥 Request data: {'phone_number': '+255655777888', 'code': '448833', 'visit_id': 44, 'email': 'coderxsultan@gmail.com'}
+INFO 2025-12-09 13:48:47,239 views 🔑 Verifying OTP for phone: +255655777888
+INFO 2025-12-09 13:48:47,239 views 🏢 Visit ID: 44
+INFO 2025-12-09 13:48:47,241 views ✅ Found visit: 44 | Current status: pending_otp
+INFO 2025-12-09 13:48:47,241 views 🔐 Verifying OTP...
+INFO 2025-12-09 13:48:47,246 views ✅ OTP verification successful!
+INFO 2025-12-09 13:48:47,246 views 📝 Starting visit update transaction...
+INFO 2025-12-09 13:48:47,247 views 📝 Refreshed visit status: pending_otp
+INFO 2025-12-09 13:48:47,247 views 🎫 Attempting to assign card...
+INFO 2025-12-09 13:48:47,249 views ✅ Assigned card 17 to visit 44
+INFO 2025-12-09 13:48:47,249 views ✅ Updated visit 44 status from 'pending_host_approval' to 'pending_host_approval'
+INFO 2025-12-09 13:48:47,250 views ✅ Confirmed new status: pending_host_approval
+INFO 2025-12-09 13:48:47,250 views 📧 Sending welcome email to coderxsultan@gmail.com...
+INFO 2025-12-09 13:48:49,777 utils ✅ Welcome email sent to coderxsultan@gmail.com for visit 44
+INFO 2025-12-09 13:48:49,778 views ✅ Sent welcome email to coderxsultan@gmail.com
+INFO 2025-12-09 13:48:49,784 views 📊 Final visit status: pending_host_approval
+INFO 2025-12-09 13:48:49,793 views 📝 Audit log created successfully
+INFO 2025-12-09 13:48:49,793 views ✅ OTP verification completed successfully
+INFO 2025-12-09 13:48:49,793 views ================================================================================
+INFO 2025-12-09 13:48:49,794 log "POST /api/visits/verify_otp/ HTTP/1.1" 200 1422
+INFO 2025-12-09 13:48:57,232 log "GET /api/host/dashboard/ HTTP/1.1" 200 16302
+INFO 2025-12-09 13:49:18,319 log "GET /api/logout/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:49:18,322 log "GET /api/home/ HTTP/1.1" 200 7834
+INFO 2025-12-09 13:49:19,511 log "GET /api/login/ HTTP/1.1" 200 3835
+INFO 2025-12-09 13:49:22,878 log "POST /api/login/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:49:22,889 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 20061
+INFO 2025-12-09 13:49:38,120 log "GET /api/logout/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:49:38,122 log "GET /api/home/ HTTP/1.1" 200 7834
+INFO 2025-12-09 13:49:39,423 log "GET /api/login/ HTTP/1.1" 200 3835
+INFO 2025-12-09 13:49:41,962 log "POST /api/login/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:49:41,971 log "GET /api/host/dashboard/ HTTP/1.1" 200 16597
+WARNING 2025-12-09 13:49:45,042 services Telerivet not configured. SMS not sent.
+INFO 2025-12-09 13:49:45,042 services [DEBUG SMS] To: +255655777888, Message: Hello jacklin hamisi, your visit to host2 has been approved.
+ERROR 2025-12-09 13:49:45,042 tasks Failed to send visitor approval notification for visit 44: SMS service not configured
+INFO 2025-12-09 13:49:45,054 log "POST /api/visits/44/host_action/ HTTP/1.1" 200 1338
+INFO 2025-12-09 13:49:46,001 log "GET /api/host/dashboard/ HTTP/1.1" 200 16070
+INFO 2025-12-09 13:49:51,986 log "POST /api/visits/44/host_action/ HTTP/1.1" 200 1354
+INFO 2025-12-09 13:49:53,000 log "GET /api/host/dashboard/ HTTP/1.1" 200 15856
+INFO 2025-12-09 13:49:55,367 log "GET /api/logout/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:49:55,370 log "GET /api/home/ HTTP/1.1" 200 7834
+INFO 2025-12-09 13:49:56,403 log "GET /api/login/ HTTP/1.1" 200 3835
+INFO 2025-12-09 13:49:59,037 log "POST /api/login/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:49:59,048 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 22104
+INFO 2025-12-09 13:50:05,126 log "POST /api/visits/44/secretary_action/ HTTP/1.1" 200 1426
+INFO 2025-12-09 13:50:06,645 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19758
+INFO 2025-12-09 13:50:36,679 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19758
+INFO 2025-12-09 13:51:07,771 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19758
+INFO 2025-12-09 13:51:16,741 log "GET /api/logout/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:51:16,743 log "GET /api/home/ HTTP/1.1" 200 7834
+INFO 2025-12-09 13:51:17,859 log "GET /api/login/ HTTP/1.1" 200 3835
+INFO 2025-12-09 13:51:20,205 log "POST /api/login/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:51:20,212 log "GET /api/host/dashboard/ HTTP/1.1" 200 16150
+WARNING 2025-12-09 13:51:22,477 services Telerivet not configured. SMS not sent.
+INFO 2025-12-09 13:51:22,477 services [DEBUG SMS] To: +255718650285, Message: Hello mohamad sultan, your visit to host2 has been approved.
+ERROR 2025-12-09 13:51:22,477 tasks Failed to send visitor approval notification for visit 43: SMS service not configured
+INFO 2025-12-09 13:51:22,484 log "POST /api/visits/43/host_action/ HTTP/1.1" 200 1338
+INFO 2025-12-09 13:51:24,363 log "GET /api/host/dashboard/ HTTP/1.1" 200 15623
+INFO 2025-12-09 13:51:28,173 log "POST /api/visits/43/host_action/ HTTP/1.1" 200 1354
+INFO 2025-12-09 13:51:29,772 log "GET /api/host/dashboard/ HTTP/1.1" 200 14345
+INFO 2025-12-09 13:51:38,912 log "GET /api/logout/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:51:38,914 log "GET /api/home/ HTTP/1.1" 200 7834
+INFO 2025-12-09 13:51:40,604 log "GET /api/login/ HTTP/1.1" 200 3835
+INFO 2025-12-09 13:51:43,049 log "POST /api/login/ HTTP/1.1" 302 0
+INFO 2025-12-09 13:51:43,060 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 22098
+INFO 2025-12-09 13:52:09,767 log "POST /api/visits/43/secretary_action/ HTTP/1.1" 200 1426
+INFO 2025-12-09 13:52:11,282 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 13:52:41,316 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 13:53:11,352 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 13:53:43,357 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 13:54:13,389 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 13:54:43,424 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 13:55:13,457 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 13:55:43,490 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 13:56:13,529 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 13:56:44,575 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 13:57:14,621 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 13:57:45,404 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 13:58:15,449 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 13:58:46,550 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 13:59:16,618 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 13:59:46,654 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 14:00:16,699 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 14:00:46,752 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 14:01:17,116 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 14:01:48,177 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 14:02:19,483 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 14:02:50,614 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 14:03:23,220 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 14:03:53,266 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 14:04:26,659 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 14:04:56,706 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 14:05:26,751 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 14:05:56,797 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 14:06:27,910 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 14:06:57,955 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 14:07:27,999 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 14:07:58,251 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 14:08:28,296 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 14:08:58,341 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 14:09:28,542 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 14:09:58,588 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 14:10:28,635 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 14:10:59,663 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 14:11:29,708 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 14:11:59,751 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 14:12:29,945 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 14:12:59,990 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 14:13:30,035 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 14:14:00,234 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 14:14:30,279 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 14:15:00,324 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 14:15:31,377 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 14:16:01,422 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 14:16:31,467 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 14:16:57,170 autoreload /home/hamy/Desktop/vms-backend/core/tasks.py changed, reloading.
+INFO 2025-12-09 14:16:57,548 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 14:17:02,683 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 14:17:09,992 autoreload /home/hamy/Desktop/vms-backend/vms/settings.py changed, reloading.
+INFO 2025-12-09 14:17:10,340 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 14:30:14,725 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 14:30:39,740 log "GET /api/secretary/dashboard/ HTTP/1.1" 200 19752
+INFO 2025-12-09 14:30:46,617 log "GET /api/logout/ HTTP/1.1" 302 0
+INFO 2025-12-09 14:30:46,621 log "GET /api/home/ HTTP/1.1" 200 7834
+INFO 2025-12-09 14:30:54,023 log "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-12-09 14:30:54,026 log "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3880
+INFO 2025-12-09 14:30:58,056 log "POST /admin/login/ HTTP/1.1" 302 0
+INFO 2025-12-09 14:30:58,072 log "GET /admin/ HTTP/1.1" 200 17046
+INFO 2025-12-09 14:31:27,988 log "POST /admin/logout/ HTTP/1.1" 200 3475
+INFO 2025-12-09 14:31:31,721 log "GET / HTTP/1.1" 200 7834
+INFO 2025-12-09 14:33:39,397 autoreload /home/hamy/Desktop/vms-backend/vms/settings.py changed, reloading.
+INFO 2025-12-09 14:33:39,753 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 14:33:42,008 autoreload /home/hamy/Desktop/vms-backend/vms/settings.py changed, reloading.
+INFO 2025-12-09 14:33:42,346 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 14:43:13,944 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 14:43:28,577 log "GET /api/hosts/for_kiosk/ HTTP/1.1" 200 176
+INFO 2025-12-09 14:43:28,601 log "GET /api/visitors/names/ HTTP/1.1" 200 89
+INFO 2025-12-09 14:45:04,503 log "POST /api/visits/check_in/ HTTP/1.1" 201 103
+INFO 2025-12-09 14:45:04,529 views ================================================================================
+INFO 2025-12-09 14:45:04,529 views 🔄 Processing OTP request
+DEBUG 2025-12-09 14:45:04,529 views 📥 Request data: {'phone_number': '+255778769590', 'visit_id': 45, 'email': 'sultankvanny@gmail.com'}
+INFO 2025-12-09 14:45:04,529 views 📱 Processing OTP request for phone: +255778769590
+INFO 2025-12-09 14:45:04,529 views 📧 Email provided: sultankvanny@gmail.com
+INFO 2025-12-09 14:45:04,529 views 🏢 Visit ID: 45
+INFO 2025-12-09 14:45:04,530 views ✅ Found visit: 45
+INFO 2025-12-09 14:45:04,530 views 🔑 Generating OTP...
+WARNING 2025-12-09 14:45:04,535 utils Cache error in increment_otp_rate_limit: 'Settings' object has no attribute 'OTP_RATE_LIMIT_HOURS'
+INFO 2025-12-09 14:45:04,535 views ✅ OTP generated: 036988 (ID: 37)
+INFO 2025-12-09 14:45:04,535 views 🚀 Queueing OTP sending task...
+INFO 2025-12-09 14:45:04,580 tasks ================================================================================
+INFO 2025-12-09 14:45:04,580 tasks 🚀 Starting OTP sending task
+INFO 2025-12-09 14:45:04,580 tasks 📱 Phone: +255778769590
+INFO 2025-12-09 14:45:04,580 tasks 📧 Email: sultankvanny@gmail.com
+INFO 2025-12-09 14:45:04,580 tasks 🔑 OTP Code: 036988
+INFO 2025-12-09 14:45:04,580 tasks 💬 Attempting WhatsApp...
+ERROR 2025-12-09 14:45:04,583 whatsapp_service ❌ Twilio credentials not configured
+INFO 2025-12-09 14:45:04,583 tasks 📱 WhatsApp failed, trying SMS...
+ERROR 2025-12-09 14:45:04,583 whatsapp_service ❌ Twilio SMS credentials not configured
+INFO 2025-12-09 14:45:04,583 tasks 📧 Sending email to sultankvanny@gmail.com...
+INFO 2025-12-09 14:45:04,583 utils 📧 Preparing to send OTP email to: sultankvanny@gmail.com
+DEBUG 2025-12-09 14:45:04,584 utils 📤 Sending email - From: VMS <sulboymnyama@gmail.com>, To: ['sultankvanny@gmail.com']
+DEBUG 2025-12-09 14:45:04,584 utils 📧 Subject: Your VMS System Verification Code
+INFO 2025-12-09 14:45:08,637 utils ✅ Successfully sent OTP email to sultankvanny@gmail.com
+INFO 2025-12-09 14:45:08,638 tasks ✅ Email sent to sultankvanny@gmail.com
+INFO 2025-12-09 14:45:08,639 tasks 📊 Task completed:
+INFO 2025-12-09 14:45:08,639 tasks 💬 WhatsApp: ❌ Twilio credentials not configured
+INFO 2025-12-09 14:45:08,639 tasks 📱 SMS: ❌ Twilio SMS credentials not configured
+INFO 2025-12-09 14:45:08,639 tasks 📧 Email: ✅ OTP sent successfully
+INFO 2025-12-09 14:45:08,639 tasks ================================================================================
+INFO 2025-12-09 14:45:08,644 views 📨 Task completed: {'whatsapp': {'sent': False, 'message': 'Twilio credentials not configured'}, 'sms': {'sent': False, 'message': 'Twilio SMS credentials not configured'}, 'email': {'sent': True, 'message': 'OTP sent successfully'}, 'overall_success': True}
+INFO 2025-12-09 14:45:08,650 views 📝 Audit log created successfully
+INFO 2025-12-09 14:45:08,650 views ✅ OTP request processed successfully. Response: {'message': 'Warning: Failed to send SMS. Please try again. Check your email for the code.', 'phone_number': '+255778769590', 'sms_sent': False, 'email_sent': True, 'expires_in_minutes': 5}
+INFO 2025-12-09 14:45:08,650 views ================================================================================
+INFO 2025-12-09 14:45:08,651 log "POST /api/visits/request_otp/ HTTP/1.1" 200 180
+INFO 2025-12-09 14:47:25,294 autoreload /home/hamy/Desktop/vms-backend/vms/settings.py changed, reloading.
+INFO 2025-12-09 14:47:25,651 autoreload Watching for file changes with StatReloader
+INFO 2025-12-09 14:47:42,063 autoreload /home/hamy/Desktop/vms-backend/vms/settings.py changed, reloading.

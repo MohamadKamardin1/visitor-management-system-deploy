@@ -1,0 +1,5 @@
+Collecting whitenoise
+  Using cached whitenoise-6.11.0-py3-none-any.whl.metadata (3.7 kB)
+Using cached whitenoise-6.11.0-py3-none-any.whl (20 kB)
+Installing collected packages: whitenoise
+Successfully installed whitenoise-6.11.0

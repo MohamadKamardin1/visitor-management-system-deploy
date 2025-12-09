@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitor Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg-1: #0b0b0f;
+            --bg-2: #111118;
+            --panel: rgba(255,255,255,0.06);
+            --border: rgba(255,255,255,0.14);
+            --text: #f5f6f8;
+            --muted: #b7bbc6;
+            --accent: #8e8e99;
+        }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--bg-1), var(--bg-2));
+            color: var(--text);
+            font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+        .text-muted { color: var(--muted) !important; }
+        .glass {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            box-shadow: 0 18px 60px rgba(0,0,0,0.45);
+            backdrop-filter: blur(18px);
+        }
+        .hero {
+            padding: 90px 0 50px;
+        }
+        .btn-accent {
+            background: linear-gradient(145deg,#1c1c22,#25252c);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: var(--text);
+            border-radius: 14px;
+            padding: 14px 18px;
+            font-weight: 600;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+        }
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            background: rgba(255,255,255,0.04);
+            color: var(--muted);
+            font-size: 14px;
+        }
+        .section {
+            padding: 48px 0;
+        }
+        .icon-circle {
+            width: 52px;
+            height: 52px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid var(--border);
+            color: var(--text);
+        }
+        .footer {
+            border-top: 1px solid var(--border);
+            padding: 24px 0;
+            margin-top: 40px;
+            color: var(--muted);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark glass mt-3 mx-3 px-3">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-building me-2"></i>VMS
+            </a>
+            <div class="navbar-nav ms-auto">
+                <a class="btn btn-accent me-2" href="/admin/"><i class="fas fa-lock me-1"></i> Admin</a>
+                <a class="btn btn-outline-light" style="border-color:rgba(255,255,255,0.35);" href="/api/login/"><i class="fas fa-user me-1"></i> Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-4">
+        <section class="hero row align-items-center">
+            <div class="col-lg-6 mb-4">
+                <div class="pill mb-3"><i class="fas fa-shield-alt"></i> Secure · Modern · Realtime</div>
+                <h1 class="fw-bold mb-3" style="font-size:44px; letter-spacing:-0.6px;">Visitor Management, Reinvented</h1>
+                <p class="text-muted mb-4" style="color:var(--muted); font-size:17px;">
+                    Seamless kiosk & QR check-in, OTP verification, card lifecycle, host approvals, and audit-grade tracking — all wrapped in a modern, production-ready stack.
+                </p>
+                <div class="d-flex flex-wrap gap-2">
+                    <a class="btn btn-accent" href="/api/login/"><i class="fas fa-gauge-high me-2"></i>Open Dashboard</a>
+                    <a class="btn btn-outline-light" style="border-color:rgba(255,255,255,0.35);" href="/admin/"><i class="fas fa-lock me-2"></i>Admin</a>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <div class="glass p-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="icon-circle me-3"><i class="fas fa-mobile-alt"></i></div>
+                        <div>
+                            <h5 class="mb-0">Kiosk + QR flow</h5>
+                            <small class="text-muted">Self check-in on tablet or visitor phone</small>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="icon-circle me-3"><i class="fas fa-sms"></i></div>
+                        <div>
+                            <h5 class="mb-0">OTP by SMS</h5>
+                            <small class="text-muted">Verified phone for every visitor</small>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="icon-circle me-3"><i class="fas fa-id-card"></i></div>
+                        <div>
+                            <h5 class="mb-0">Card lifecycle</h5>
+                            <small class="text-muted">Assign, verify return, and audit</small>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="icon-circle me-3"><i class="fas fa-user-check"></i></div>
+                        <div>
+                            <h5 class="mb-0">Host approvals</h5>
+                            <small class="text-muted">Approve, reject, finish visits</small>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="icon-circle me-3"><i class="fas fa-clipboard-list"></i></div>
+                        <div>
+                            <h5 class="mb-0">Audit-ready</h5>
+                            <small class="text-muted">Full logging, throttling, and security</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="glass p-3 h-100">
+                        <div class="icon-circle mb-3"><i class="fas fa-chart-line"></i></div>
+                        <h5 class="mb-2">Dashboards</h5>
+                        <p class="text-muted">Host/Secretary dashboards with real-time status, approvals, and card actions.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="glass p-3 h-100">
+                        <div class="icon-circle mb-3"><i class="fas fa-database"></i></div>
+                        <h5 class="mb-2">API Ready</h5>
+                        <p class="text-muted">REST endpoints for kiosk and QR web flows; integrate easily.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="glass p-3 h-100">
+                        <div class="icon-circle mb-3"><i class="fas fa-lock"></i></div>
+                        <h5 class="mb-2">Secure</h5>
+                        <p class="text-muted">OTP, rate limiting, audit logs, production hardening.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer text-center">
+        <small>Visitor Management System · Secure · Modern · Scalable</small>
+    </footer>
+</body>
+</html>
+

@@ -1,0 +1,48 @@
+{% extends "core/base.html" %}
+
+{% block title %}Login - VMS{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-4">
+        <div class="card glass-card shadow border-0">
+            <div class="card-body p-5">
+                <div class="text-center mb-4">
+                    <div class="d-inline-flex align-items-center justify-content-center rounded-circle" style="width:86px;height:86px;background:linear-gradient(145deg,#1b1b21,#25252c);box-shadow:0 10px 30px rgba(0,0,0,0.35);">
+                        <i class="fas fa-building fa-2x text-white"></i>
+                    </div>
+                    <h3 class="mt-3 mb-1 text-white">Visitor Management</h3>
+                    <p class="text-secondary mb-0">Please login to continue</p>
+                </div>
+                
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="username" class="form-label text-secondary">
+                            <i class="fas fa-user me-2"></i>Username
+                        </label>
+                        <input type="text" class="form-control" id="username" name="username" required autofocus>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="password" class="form-label text-secondary">
+                            <i class="fas fa-lock me-2"></i>Password
+                        </label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary w-100">
+                        <i class="fas fa-sign-in-alt me-2"></i>Login
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+
+
+
+

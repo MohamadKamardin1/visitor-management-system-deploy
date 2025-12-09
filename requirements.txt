@@ -1,0 +1,37 @@
+# Django and REST Framework
+Django>=6.0,<7.0
+djangorestframework>=3.14.0
+djangorestframework-simplejwt>=5.3.0
+
+# CORS
+django-cors-headers>=4.3.0
+
+# Database
+psycopg2-binary>=2.9.9
+
+# Redis and Caching
+redis>=5.0.0
+django-redis>=5.4.0
+
+# Celery
+celery>=5.3.0
+django-celery-results>=2.5.0
+# Note: django-celery-beat doesn't support Django 6.0 yet
+# Use regular celery beat scheduler instead: celery -A vms beat -l info
+# django-celery-beat>=2.9.0  # Uncomment when Django 6.0 support is available
+
+# SMS Service (Telerivet)
+requests>=2.31.0
+twilio>=8.0.0
+
+# Environment variables
+python-decouple>=3.8
+python-dotenv>=1.0.0
+
+# Utilities
+Pillow>=10.0.0
+
+# Development
+ipython>=8.12.0
+
+gunicorn>=21.0.0

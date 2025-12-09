@@ -1,0 +1,336 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block title %}Host Dashboard - VMS{% endblock %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="d-flex align-items-center justify-content-between">
+            <div>
+                <h2 class="fw-bold mb-1"><i class="fas fa-tachometer-alt me-2"></i>Host Dashboard</h2>
+                <p class="text-secondary mb-0">Welcome, {{ host.user.get_full_name|default:host.user.username }}{% if host.department %} — {{ host.department }}{% endif %}</p>
+            </div>
+            <span class="badge bg-info text-dark px-3 py-2 glass-card border-0">Host</span>
+        </div>
+    </div>
+</div>
+
+<!-- Statistics Cards -->
+<div class="row mb-4">
+    <div class="col-md-3">
+        <div class="card text-white glass-card" style="background: linear-gradient(145deg,#1c1c22,#22222a); border:1px solid rgba(255,255,255,0.05);">
+            <div class="card-body">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <h6 class="card-title">Pending Actions</h6>
+                        <h2>{{ pending_count }}</h2>
+                    </div>
+                    <div class="align-self-center">
+                        <i class="fas fa-exclamation-triangle fa-2x"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-white glass-card" style="background: linear-gradient(145deg,#1f1f25,#25252d); border:1px solid rgba(255,255,255,0.05);">
+            <div class="card-body">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <h6 class="card-title">Finished Visits</h6>
+                        <h2>{{ finished_count }}</h2>
+                    </div>
+                    <div class="align-self-center">
+                        <i class="fas fa-flag-checkered fa-2x"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Pending Visits -->
+{% if pending_visits %}
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="card glass-card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-bell me-2"></i>Pending Actions Required</h5>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover table-neo align-middle">
+                        <thead>
+                            <tr>
+                                <th>Visitor</th>
+                                <th>Phone</th>
+                                <th>Purpose</th>
+                                <th>Card</th>
+                                <th>Status</th>
+                                <th>Time</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for visit in pending_visits %}
+                            <tr id="visit-row-{{ visit.id }}">
+                                <td><strong>{{ visit.visitor.name }}</strong></td>
+                                <td>{{ visit.visitor.phone_number }}</td>
+                                <td>{{ visit.purpose|truncatewords:5 }}</td>
+                                <td>
+                                    {% if visit.card %}
+                                        <span class="badge bg-info">{{ visit.card.card_number }}</span>
+                                    {% else %}
+                                        <span class="text-muted">-</span>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    <span class="badge bg-warning">
+                                        {{ visit.get_status_display }}
+                                    </span>
+                                </td>
+                                <td>{{ visit.created_at|timesince }} ago</td>
+                                <td>
+                                    {% if visit.status == 'pending_host_approval' %}
+                                        <button class="btn btn-sm btn-success me-1" onclick="approveVisit({{ visit.id }})">
+                                            <i class="fas fa-check"></i> Approve
+                                        </button>
+                                        <button class="btn btn-sm btn-danger" onclick="rejectVisit({{ visit.id }})">
+                                            <i class="fas fa-times"></i> Reject
+                                        </button>
+                                    {% elif visit.status == 'approved' %}
+                                        <button class="btn btn-sm btn-primary" onclick="finishVisit({{ visit.id }})">
+                                            <i class="fas fa-flag-checkered"></i> Finish
+                                        </button>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<!-- All Visits -->
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-list me-2"></i>All Visits</h5>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover table-neo">
+                        <thead>
+                            <tr>
+                                <th>Visitor</th>
+                                <th>Phone</th>
+                                <th>Purpose</th>
+                                <th>Card</th>
+                                <th>Status</th>
+                                <th>Check-in</th>
+                                <th>Check-out</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for visit in finished_visits %}
+                            <tr id="visit-row-{{ visit.id }}">
+                                <td><strong>{{ visit.visitor.name }}</strong></td>
+                                <td>{{ visit.visitor.phone_number }}</td>
+                                <td>{{ visit.purpose|truncatewords:5 }}</td>
+                                <td>
+                                    {% if visit.card %}
+                                        <span class="badge bg-info">{{ visit.card.card_number }}</span>
+                                    {% else %}
+                                        <span class="text-muted">-</span>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    <span class="badge bg-success">
+                                        {{ visit.get_status_display }}
+                                    </span>
+                                </td>
+                                <td>{{ visit.check_in_time|date:"H:i"|default:"-" }}</td>
+                                <td>{{ visit.check_out_time|date:"H:i"|default:"-" }}</td>
+                                <td>
+                                    <small class="text-muted">Completed</small>
+                                </td>
+                            </tr>
+                            {% empty %}
+                            <tr>
+                                <td colspan="8" class="text-center text-muted">No completed visits yet</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Approve Modal -->
+<div class="modal fade" id="approveModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Approve Visit</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <form id="approveForm">
+                <div class="modal-body">
+                    <input type="hidden" id="approveVisitId">
+                    <div class="mb-3">
+                        <label for="instructions" class="form-label">Instructions for Visitor (Optional)</label>
+                        <textarea class="form-control" id="instructions" rows="3" placeholder="e.g., Please come to office 205"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-success">Approve Visit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Reject Modal -->
+<div class="modal fade" id="rejectModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Reject Visit</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <form id="rejectForm">
+                <div class="modal-body">
+                    <input type="hidden" id="rejectVisitId">
+                    <div class="mb-3">
+                        <label for="reason" class="form-label">Reason for Rejection (Optional)</label>
+                        <textarea class="form-control" id="reason" rows="3" placeholder="e.g., Not available at this time"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-danger">Reject Visit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+
+function approveVisit(visitId) {
+    document.getElementById('approveVisitId').value = visitId;
+    new bootstrap.Modal(document.getElementById('approveModal')).show();
+}
+
+function rejectVisit(visitId) {
+    document.getElementById('rejectVisitId').value = visitId;
+    new bootstrap.Modal(document.getElementById('rejectModal')).show();
+}
+
+function finishVisit(visitId) {
+    if (confirm('Mark this visit as finished?')) {
+        performAction(visitId, 'finish');
+    }
+}
+
+function performAction(visitId, action) {
+    const csrftoken = getCookie('csrftoken');
+    
+    const data = {
+        action: action
+    };
+    
+    // Add optional fields based on action
+    if (action === 'approve') {
+        const instructions = document.getElementById('instructions').value || '';
+        data.instructions = instructions;
+    } else if (action === 'reject') {
+        const reason = document.getElementById('reason').value || '';
+        data.reason = reason;
+    }
+    
+    console.log('Sending data:', data); // Debug log
+    
+    // Correct endpoint: /api/visits/{id}/host_action/
+    fetch(`/api/visits/${visitId}/host_action/`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': csrftoken
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => {
+        console.log('Response status:', response.status); // Debug log
+        if (!response.ok) {
+            return response.text().then(text => {
+                throw new Error(`HTTP ${response.status}: ${text}`);
+            });
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log('Success response:', data); // Debug log
+        alert('Visit ' + action + 'ed successfully!');
+        location.reload();
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Error: ' + error.message);
+    });
+}
+
+document.getElementById('approveForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const visitId = document.getElementById('approveVisitId').value;
+    const modal = bootstrap.Modal.getInstance(document.getElementById('approveModal'));
+    if (modal) modal.hide();
+    performAction(visitId, 'approve');
+});
+
+document.getElementById('rejectForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const visitId = document.getElementById('rejectVisitId').value;
+    const modal = bootstrap.Modal.getInstance(document.getElementById('rejectModal'));
+    if (modal) modal.hide();
+    performAction(visitId, 'reject');
+});
+
+// Auto-refresh every 30 seconds
+setInterval(function() {
+    location.reload();
+}, 30000);
+</script>
+{% endblock %}
+
+
+
+
+
+

@@ -1,0 +1,6 @@
+Collecting gunicorn
+  Using cached gunicorn-23.0.0-py3-none-any.whl.metadata (4.4 kB)
+Requirement already satisfied: packaging in ./venv/lib/python3.12/site-packages (from gunicorn) (25.0)
+Using cached gunicorn-23.0.0-py3-none-any.whl (85 kB)
+Installing collected packages: gunicorn
+Successfully installed gunicorn-23.0.0
